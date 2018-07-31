@@ -202,7 +202,7 @@ Javascript
 
 * **_Primitive Types:_**
 
-  A Type of data that represents a _single value_.
+  A type of data that represents a _single value_.
 
   There are 6 Primitive types in javascript:
 
@@ -233,6 +233,64 @@ Javascript
 
 * **_Associativity:_**
 
-  In what order operator functions get called in: _left to right_ or _right to left_, when two or more operator  functions have the same precedence. _Left-to-Right_ is called _Left Associativity_ and _Right-to-Left_ is called _Right Associativity_.
+  In what order operator functions get called in: _left-to-right_ or _right-to-left_, when two or more operator  functions have the same precedence. _Left-to-Right_ is called _Left Associativity_ and _Right-to-Left_ is called _Right Associativity_.
 
   [Read more on operator precedence and associativity](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+
+  Example:
+
+  ```javascript
+  var a = 2, b = 3, c = 4;
+
+  a = b = c;
+  // Assignment operator has right-to-left associativity
+
+  console.log(a); // output: 4
+  console.log(b); // output: 4
+  console.log(c); // output: 4
+  ```
+
+* **_Coercion:_**
+
+  Converting a value from one type to another.
+
+  Example:
+
+  ```javascript
+
+  // Coercion
+  var a = 1 + '2';
+  console.log(a); // output: 12
+
+  console.log(3 < 2 < 1); // output: true
+
+  Number(undefined); // NaN
+  Number(null); // 0
+
+  Boolean(undefined); // false
+  Boolean(null); // false
+  Boolean(""); // false
+  Boolean(0); // false
+
+  ```
+
+* Its good practice to use `===` instead of `==` for equality check. In case of `==`, coercion occurs if it is comparing different data type. Whereas in `===`, coercion doesn't occur.
+
+* `===` will return true on comparison only if the RHS of operator has same value and data type as the LHS of the operator.
+
+  [Read more on Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+
+* Default Value:
+
+  Example:
+
+  ```javascript
+  // In ES5
+  function greet(name) {
+    name = name || 'default value';
+    console.log('Hello ' + name); // Hello default value
+  }
+
+  greet();
+
+  ```
