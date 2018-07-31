@@ -1,9 +1,6 @@
 Javascript
 ==========
 
-Basic Concepts:
----------------
-
 * **_Syntax Parser_:**
   
   A program that reads your code and determines what it does and if its grammar or syntax is valid.
@@ -44,7 +41,7 @@ Basic Concepts:
   * At global level, global object (window) is equal to 'this'.
   * Execution context is created in two phases: **_Creation Phase_** and **_Execution Phase_**
   * In _Creation Phase_, Global Object, 'this', Outer environment and Hoisting are created.
-  * In _Creation Phase_, Parser runs throught the code and begins to setup translations such as where we have created variables or functions and setup memory space for variables and functions. This is called '**_Hoisting_**'.
+  * In _Creation Phase_, Parser runs through the code and begins to setup translations such as where we have created variables or functions and setup memory space for variables and functions. This is called '**_Hoisting_**'.
 * All variables is javascript is initial set to _undefined_ by javascript engine.
 * _undefined_ is a special keyword or value in javascript. Its also one of a data type in javascript. It is assigned to a variable _which is declared but not defined_ by javascript engine.
 * Defining a variable with _undefined_ is a bad practice and should be avoided.
@@ -73,7 +70,7 @@ Basic Concepts:
 
   One line of code is executed at a time in order.
 
-* Javascript is a _Single Threaded_ and _Synchronous_ execution in behaviour.
+* Javascript is a _Single Threaded_ and _Synchronous_ execution in behavior.
 
 * **_Invocation:_**
 
@@ -82,7 +79,7 @@ Basic Concepts:
   Example:
 
   ```javascript
-  function b() { 
+  function b() {
   }
   
   function a() {
@@ -185,12 +182,57 @@ Basic Concepts:
 
   More than one at a time. Multiple piece of code executing at the same time.
 
-* In browser, The javascript engine talks with the Rendering Engine which is outside the javascript engine. Rendering engine prints or renders the contents on the screen. This communication between the Rendering engine and Javascript engine is _asynchrouns_ in nature. Whereas whats happening inside the javascript engine is _synchrouns_ execution.
+* In browser, The javascript engine talks with the Rendering Engine which is outside the javascript engine. Rendering engine prints or renders the contents on the screen. This communication between the Rendering engine and Javascript engine is _asynchronous_ in nature. Whereas whats happening inside the javascript engine is _synchronous_ execution.
 
-* Javascript Engine has list/queue to manange the events called _Event Queue_. Every event is placed on this queue when its called.
+* Javascript Engine has list/queue to manage the events called _Event Queue_. Every event is placed on this queue when its called.
 
-* Javascript Engine looks for _Event Queue_ after every execution context is popped-off the execution stack. Then when the execution stack is empty, events are processed from the _Event Queue_. For each event a new execution context is created on the excution stack.
+* Javascript Engine looks for _Event Queue_ after every execution context is popped-off the execution stack. Then when the execution stack is empty, events are processed from the _Event Queue_. For each event a new execution context is created on the execution stack.
 
-* Browser places every event called in _Event Queue_ asynchrously. Whereas Javascript engine execute it one by one synchrously.
+* Browser places every event called in _Event Queue_ asynchronously. Whereas Javascript engine execute it one by one synchronously.
 
-* Long running functions interupts the event calls. As the execution stack is not empty, the event are not processed.
+* Long running functions interrupts the event calls. As the execution stack is not empty, the event are not processed.
+
+* **_Dynamic Typing:_**
+
+  We don't specify the javascript engine what type of data a variable should hold, instead its been figured out while the code is running/executing. Variables can hold different types of values because it's all figured out during execution.
+
+* Javascript is _Dynamically Typed_. It means that there is no keyword in javascript to tell which type of variable is it.
+
+* Javascript determines the variable type at the time of execution.
+
+* **_Primitive Types:_**
+
+  A Type of data that represents a _single value_.
+
+  There are 6 Primitive types in javascript:
+
+  1. **Undefined**: It represents lack of existence. It shouldn't be set/assigned to a variable.
+
+  2. **Null**: It also represents lack of existence. It can be set/assigned to a variable.
+
+  3. **Boolean**: It represents the values such as `true` or `false`.
+
+  4. **Number**: In javascript, it always represent to a floating point numbers(numbers with decimals)
+
+  5. **String**: It is a sequence of characters enclosed in single or double quotes.
+
+  6. **Symbol**: Its used in ES6 and next version. Its not fully supported by older browsers.
+
+* **_Operators:_**
+
+  A special function that is syntactically (written) differently. Generally, operators take two parameters and return one result.
+
+* Operators uses _infix notation_. Eg: 3 `+` 4
+
+* _Infix notation_ is the notation commonly used in arithmetical and logical formulae and statements. It is characterized by the placement of operators between operands - "infixed operators" - such as the plus sign in 2 + 2.
+
+* **_Operator Precedence:_**
+
+  Which operator function gets called first. Functions are called in order of precedence.
+  If more than one operators are present, the operator with higher precedence is called first.
+
+* **_Associativity:_**
+
+  In what order operator functions get called in: _left to right_ or _right to left_, when two or more operator  functions have the same precedence. _Left-to-Right_ is called _Left Associativity_ and _Right-to-Left_ is called _Right Associativity_.
+
+  [Read more on operator precedence and associativity](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
