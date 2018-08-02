@@ -294,3 +294,213 @@ Javascript
   greet();
 
   ```
+
+* Framework or Library is grouping of javascript code that performs a task and is intended to be reuseable.
+
+* Object can have properties and methods.i.e, A object can have a _Primitive_ property, _Object_ property and _Function_ method. Object is sitting in memory and will have references to the addresses/spaces in memory of its properties and method.
+
+* Functions ins ide an object is called as _method_.
+
+* _Computed member access operator_ is used to created new properties or methods for the object.
+
+* _dot operator_ or _member access operator_ is also used to created new properties or methods for the object.
+
+  ```javascript
+
+  var person = new Object();
+  person["firstName"] = "Syed"; // Computed member access operator
+
+  person.lastName = "Pasha"; // dot operator/member access operator
+
+  ```
+
+* JavaScript is case-sensitive and uses the Unicode character set.
+
+* An _object literal_ is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
+
+* **_Namespace:_**
+
+  A container for variables and functions. Typically to keep variables and functions with the same name separate.
+
+  Example:
+
+  ```javascript
+
+  var greet = 'Hello!';
+  var greet = 'Hola!';
+
+  console.log(greet); // output: Hola!
+  // Collision or overriding of variables occurs here
+
+  var english = {}; // Object literal syntax
+  var spanish = {};
+
+  english.greet = "Hello!";
+  spanish.greet = "Hola!";
+  // here greet value doesn't collide or override by the same variable name
+  // here 'english' and 'spanish' act as container for the greet variable
+
+  console.log(english);
+
+  ```
+
+* **JSON (JavaScript Object Notation)** is inspired by the object literal syntax. Here the property values must be enclosed in quotes. Technically, JSON is a subset of object literal syntax.
+
+* In Javascript, `JSON.stringify()` is used to convert Object to JSON and `JSON.parse()` is used to convert JSON to object.
+
+  ```json
+
+  {
+    "firstName": "Syed",
+    "isAProgrammer": true
+  }
+
+  ```
+
+  ```javascript
+
+  var objectLiteral = {
+    firstName: 'Syed',
+    isAProgrammer: true
+  }
+
+  console.log(JSON.stringify(objectLiteral))
+  // JSON.stringify() convert object into JSON
+
+  ```
+
+* **_First Class Functions:_**
+
+  Everything you can do with other types you can do with functions. We can assign them to variables, pass them around as parameters to other functions, create them on the fly. Functions are special type of object in javascript. We can attach properties and methods to a function such as Primitive, Object nad Function.
+
+* In Javascript, Functions are object.
+  
+* In Javascript, Function object has some hidden special properties such as 
+  * _Name:_ Optional property - A function can have name or it can be anonymous .i.e, function without name.
+  * _Code:_ its the actual line of code which we have written sit. It can be invocable (run this piece of code).
+
+  Example:
+
+  ```javascript
+  
+  // Functions are object
+  function greet() {
+    console.log('Hi');
+  }
+  // This function has properties:
+  // Name: 'greet'
+  // Code: console.log('Hi');
+
+  greet.language = 'english';
+
+  console.log(greet); // output: function greet() { console.log('Hi');}
+  console.log(greet.language); // output: english
+
+  ```
+
+* **_Expression:_**
+
+  A unit of code that results in a value. An expression return a value.
+
+* **_Statement:_**
+
+  A unit of code that doesn't results in a value. Statement doesn't return a value.
+
+* Function Expression aren't hoisted. Only variable are hoisted.
+
+  ```javascript
+
+  // Function Statement
+  function greet() {
+    console.log('Hi');
+  }
+
+  greet();
+
+
+  // Function Expression
+  var anonymousGreet = function() {
+    console.log('Hi');
+  }
+
+  anonymousGreet();
+
+  // -----------------------
+  function log(a) {
+    a();
+  }
+
+  // Passing a function as parameter - First Class Function
+  // Function Expression
+  log(function() {
+    console.log('Hi');
+  });
+
+  ```
+
+* **_By Value:_**
+
+  All primitive types interact _by value_.
+
+  ```javascript
+
+  var a = 3; // 'a' has some primitive value & is stored in a memory location.
+
+  var b = a; // Here value of 'a' is been copied to 'b', which is stored in some other location (other then 'a' location).
+
+  a = 2; // change in value of 'a' does not affect the 'b'
+
+  console.log(a); // output: 2
+  console.log(b); // output: 3
+
+  ```
+
+* **_By Reference:_**
+
+  All objects including functions interact _by reference_.
+
+  ```javascript
+
+  var a = {
+    greeting: 'Hi'
+  };
+  // here 'a' is an object & is stored in a memory location.
+  var b = a; // Here 'b' points to the same memory location of 'a'. No new object is created.
+
+  a.greeting = 'Hello' // mutate
+
+  console.log(a); // output: { greeting: 'Hello'};
+  console.log(b); // output: { greeting: 'Hello'};
+
+  // --------------------------------
+  // by reference (even as parameters)
+
+  function changeGreeting(obj) {
+    obj.greeting = 'Hola'; // mutate
+  }
+
+  changeGreeting(b);
+
+  console.log(a); // output: { greeting: 'Hola'};
+  console.log(b); // output: { greeting: 'Hola'};
+
+  // --------------------------------
+
+  // Equals operator sets up new memory space (new address)
+  // This is a special case where by references doesn't apply
+
+  a = { greeting: 'Howdy' }; // Here new memory location was setup for 'a'
+  // 'a' pointing to different spot in memory in this case
+
+  console.log(a); // output: { greeting: 'Howdy'};
+  console.log(b); // output: { greeting: 'Hola'};
+
+  ```
+
+* **_Mutate:_**
+
+  To change something.
+
+* **_Immutable:_**
+
+  It means it can't be changed.
