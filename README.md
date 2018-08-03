@@ -299,6 +299,8 @@ Javascript
 
 * Object can have properties and methods.i.e, A object can have a _Primitive_ property, _Object_ property and _Function_ method. Object is sitting in memory and will have references to the addresses/spaces in memory of its properties and method.
 
+* Object is said to have property if its value is _Primitive_ and method if its value is _Function_.
+
 * Functions ins ide an object is called as _method_.
 
 * _Computed member access operator_ is used to created new properties or methods for the object.
@@ -505,5 +507,196 @@ Javascript
 
   It means it can't be changed.
 
+* **_this:_**
 
-  End
+  ```javascript
+
+  function a() {
+    console.log(this); // Here 'this' points to global window object
+    this.newVariable = 'hello'; // variables can be defined in global window object
+  }
+
+  var b = function() {
+    console.log(this); // Here 'this' points to global window object
+  }
+
+  a();
+
+  console.log(newVariable); // assigned variable can be used without this operator
+
+  b();
+
+  var c = {
+    name: 'value',
+    log: function() {
+      this.name : 'Updated value' // this will mutate the 'name' value
+
+      console.log(this); // output: {name: 'value',log: function() {console.log(this);}}
+      // Here 'this' points to the 'c' object
+      // It points to the object contains 'this'
+
+
+      var setName = function(newName) {
+        this.name = newName; // this will not mutate the 'name' property of 'c' object, instead this will mutate the 'name' variable in global window object.
+      }
+      setName('Updated Again!');
+      console.log(this); // output: 'Updated value'
+    }
+  }
+
+  c.log();
+
+  ```
+
+  ```javascript
+
+  // The quirk can be avoided like this
+  var c = {
+    name: 'value',
+    log: function() {
+      var self = this; // assigning the reference of 'this' to a variable
+
+      self.name : 'Updated value' // this will mutate the 'name' value
+
+      console.log(self); // Here 'this' points to the 'c' object
+
+
+      var setName = function(newName) {
+        self.name = newName; // this will mutate the 'name' property of 'c' object, not the global window object.
+      }
+      setName('Updated Again!');
+      console.log(self); // output: 'Updated Again!'
+    }
+  }
+
+  c.log();
+
+  ```
+
+* **_Arrays:_**
+
+  Its a collection of same or different type of data.
+
+  ```javascript
+
+  // This is a valid array in javascript
+  var arr = [
+    1,
+    false,
+    {
+      name: 'Syed'
+    },
+    function(name) {
+      var greeting = 'Hello ';
+      console.log(greeting + name);
+    },
+    "hello"
+  ];
+
+  arr[3](arr[2].name); // output: 'Hello Syed'
+
+  ```
+
+* A new execution context is created for any _function_, which will have 'Variable Environment', 'this', 'Outer Environment' and 'arguments'.
+
+* **_Arguments:_**
+
+  The parameters that are passed to a function. _arguments_ is a keyword which contains all the value or the parameters passed to a functions.
+
+  ```javascript
+
+  function greet(firstname, lastname, language) {
+
+    if (arguments.length === 0) {
+      console.log('Missing Parameters!');
+      return;
+    }
+  
+    console.log(firstname);
+    console.log(lastname);
+    console.log(language);
+    console.log(arguments);
+    console.log(arguments[0])
+    console.log('---------');
+  }
+
+  greet();
+  greet('Syed');
+  greet('Syed', 'Pasha');
+  greet('Syed', 'Pasha', 'English');
+
+  ```
+
+* **_Function Overloading:_**
+
+  Function with a same name has different number of parameters. It doesn't work in javascript as functions are object.
+
+  ```javascript
+
+  function greet(firstname, lastname, language) {
+    language = language || 'en';
+
+    if (language === 'en') {
+      console.log('Hello ' + firstname + ' ' + lastname);
+    }
+
+    if (language === 'es') {
+      console.log('Hola ' + firstname + ' ' + lastname);
+    }
+  }
+
+  function greetEnglish(firstname, lastname) {
+    greet(firstname, lastname, 'en');
+  }
+
+  function greetSpanish(firstname, lastname) {
+    greet(firstname, lastname, 'es');
+  }
+
+  greetEnglish('Syed', 'Pasha');
+  greetSpanish('Syed', 'Pasha');
+
+  ```
+
+* Syntax Parsers reads the code character by character using a set of rules (valid syntax). It happens before the code is executed.
+
+* Its recommended to put semicolon at the end of a line of code. If there is no semicolon is present, the syntax parser will automatically insert semicolon, which can lead to unexpected behavior.
+
+  ```javascript
+
+  function getPerson() {
+    return // Here Syntax parser will automatically insert semicolon
+    {
+      firstname: 'Syed'
+    }
+  }
+
+  console.log(getPerson()); // output: undefined
+
+  ```
+
+* Whitespace: Invisible characters that create literal 'space' in the written code.
+
+* **_Immediately Invoked Function Expressions (IIFE)s:_**
+
+  Immediately invoking a function expression.
+
+  ```javascript
+
+  // Example 1:
+  var greeting = function(name) {
+    console.log('Hello ' + name);
+  }('Syed');
+
+  console.log(greeting); // output: 'Hello Syed'
+
+
+  // Example 2:
+  // Function statements can be used without function name
+  // () will trick the syntax parser to treat it as function expression
+  (function (name) {
+    var greeting = 'Hello';
+    console.log(greeting + ' ' + name);
+  }('Syed'));
+  
+  ```
