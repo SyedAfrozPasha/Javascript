@@ -11,7 +11,7 @@ Javascript
 
 * **_Execution Context_:**
 
-  The wrapper to help which manage the code that is running.
+  The wrapper which help to manage the code that is running.
   There are lots of lexical environments. Which one is currently running is managed via execution contexts.
 
 * **_Name/Value Pair_:**
@@ -74,7 +74,7 @@ Javascript
 
 * **_Invocation:_**
 
-  Running or calling a function. In Javascript, a function is invoked using parenthesis ().
+  Running or calling a function. In Javascript, a function is invoked using parenthesis `()`.
 
   Example:
 
@@ -188,7 +188,7 @@ Javascript
 
 * Javascript Engine looks for _Event Queue_ after every execution context is popped-off the execution stack. Then when the execution stack is empty, events are processed from the _Event Queue_. For each event a new execution context is created on the execution stack.
 
-* Browser places every event called in _Event Queue_ asynchronously. Whereas Javascript engine execute it one by one synchronously.
+* Browser places every event in _Event Queue_ asynchronously. Whereas Javascript engine execute it one by one synchronously.
 
 * Long running functions interrupts the event calls. As the execution stack is not empty, the event are not processed.
 
@@ -224,7 +224,7 @@ Javascript
 
 * Operators uses _infix notation_. Eg: 3 `+` 4
 
-* _Infix notation_ is the notation commonly used in arithmetical and logical formulae and statements. It is characterized by the placement of operators between operands - "infixed operators" - such as the plus sign in 2 + 2.
+* _Infix notation_ is the notation commonly used in arithmetical and logical formulae and statements. It is characterized by the placement of operators between operands - "infixed operators" - such as the plus sign in 2 `+` 2.
 
 * **_Operator Precedence:_**
 
@@ -297,11 +297,11 @@ Javascript
 
 * Framework or Library is grouping of javascript code that performs a task and is intended to be reuseable.
 
-* Object can have properties and methods.i.e, A object can have a _Primitive_ property, _Object_ property and _Function_ method. Object is sitting in memory and will have references to the addresses/spaces in memory of its properties and method.
+* Object can have properties and methods. i.e, A object can have a _Primitive_ property, _Object_ property and _Function_ method. Object is sitting in memory and will have references to the addresses/spaces in memory of its properties and method.
 
 * Object is said to have property if its value is _Primitive_ and method if its value is _Function_.
 
-* Functions ins ide an object is called as _method_.
+* Functions inside an object is called as _method_.
 
 * _Computed member access operator_ is used to created new properties or methods for the object.
 
@@ -348,10 +348,11 @@ Javascript
 
 * **JSON (JavaScript Object Notation)** is inspired by the object literal syntax. Here the property values must be enclosed in quotes. Technically, JSON is a subset of object literal syntax.
 
-* In Javascript, `JSON.stringify()` is used to convert Object to JSON and `JSON.parse()` is used to convert JSON to object.
+* In Javascript, `JSON.stringify()` is used to convert object to JSON and `JSON.parse()` is used to convert JSON to object.
 
   ```json
 
+  // Example of JSON
   {
     "firstName": "Syed",
     "isAProgrammer": true
@@ -373,12 +374,12 @@ Javascript
 
 * **_First Class Functions:_**
 
-  Everything you can do with other types you can do with functions. We can assign them to variables, pass them around as parameters to other functions, create them on the fly. Functions are special type of object in javascript. We can attach properties and methods to a function such as Primitive, Object nad Function.
+  Everything you can do with other types you can do with functions. We can assign them to variables, pass them around as parameters to other functions, create them on the fly. Functions are special type of object in javascript. We can attach properties and methods to a function such as Primitive, Object and Function.
 
 * In Javascript, Functions are object.
   
 * In Javascript, Function object has some hidden special properties such as 
-  * _Name:_ Optional property - A function can have name or it can be anonymous .i.e, function without name.
+  * _Name:_ Optional property - A function can have name or it can be anonymous (function without name).
   * _Code:_ its the actual line of code which we have written sit. It can be invocable (run this piece of code).
 
   Example:
@@ -699,4 +700,30 @@ Javascript
     console.log(greeting + ' ' + name);
   }('Syed'));
   
+  ```
+
+* Below code execution of (IIFE) under the hood:
+  * Firstly global execution context is created and the function object is placed in global execution context.
+  * The when the functions is invoked, a new execution context is created. The variables defined inside the function will sit in the execution context of its function and not in global execution context.
+
+  ```javascript
+
+  (function (name) {
+    var greeting = 'Hello';
+    console.log(greeting + ' ' + name);
+  }('Syed'));
+
+  ```
+
+  ```javascript
+
+  // We can modify the global variable inside an IIFE, if we pass the global window object as parameter to the IIFE
+  var greeting = 'Hola';
+  (function (global, name) {
+    var greeting = 'Hello';
+    global.greeting = 'Hello';
+    console.log(greeting + ' ' + name); // output: Hello Syed
+  }(window, 'Syed'));
+  console.log(greeting); // output: Hello
+
   ```
