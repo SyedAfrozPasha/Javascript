@@ -727,3 +727,209 @@ Javascript
   console.log(greeting); // output: Hello
 
   ```
+
+* **_Closures:_**
+
+  ```javascript
+
+  function greet(whattosay) {
+    return function(name) {
+      console.log(whattosay + ' ' + name);
+    }
+  }
+
+  greet('Hi')('Syed');
+
+  // or
+
+  var sayHi = greet('Hi');
+  sayHi('Syed');
+
+  ```
+
+  Steps:
+  1. When this line `var sayHi = greet('Hi');` is executed, a new execution context is created for the `greet` function. And a new variable `whattosay` is setup in the variable environment. And the function in returned to variable `sayHi`. The `greet` function execution context is popped-off the execution stack.
+  2. Then this line `sayHi('Syed')` is executed. Then a new execution context is created for `sayHi` function. `whattosay` variable is looked up in the scope chain where that variable is created (outer lexical environment reference).
+  
+  Function (execution context) which has reference to variables in its outer lexical environment. Execution context is closed in its outer variables to which it has reference even after the execution context is popped-off the execution stack. This phenomenon of closing in all the variables(free variables) that it suppose to have access to is called **_Closure_**. This is the feature of javascript language.
+
+  ```javascript
+  
+  // Example of closure
+  function buildFunctions() {
+    var arr = [];
+
+    for (var i = 0; i < 3; i++) {
+        arr.push(function() {
+            console.log(i);
+          }
+        )
+
+        // arr.push((function(j) {
+        //     return function() {
+        //       console.log(j);
+        //     }
+        //   }(i))
+        // )
+    }
+
+    return arr;
+  }
+
+  var fs = buildFunctions();
+
+  fs[0](); // output: 3
+  fs[1](); // output: 3
+  fs[2](); // output: 3
+
+  ```
+
+* Function Factories: A function which return or make other things.
+
+  ```javascript
+
+  function makeGreeting(language) {
+    return function (firstName, lastName) {
+      if (language === 'en') {
+        console.log('Hello ' + firstname + ' ' + lastname);
+      }
+
+      if (language === 'es') {
+        console.log('Hola ' + firstname + ' ' + lastname);
+      }
+    }
+  }
+
+  var greetEnglish = makeGreeting('en');
+  var greetSpanish = makeGreeting('es');
+
+  greetEnglish('Syed', 'Pasha');
+  greetSpanish('Syed', 'Pasha');
+
+  ```
+
+* **_Callback Function:_**
+
+  A function which is given to another function, to be run when the other function is finished. So the function you call (invoke), 'calls back' by the calling the function you gave it when it finishes.
+
+  ```javascript
+  
+  // Example of first-class function and closure
+  function sayHiLater() {
+    var greeting = 'Hi!';
+
+    setTimeout(function() {
+      console.log(greeting);
+    }, 3000);
+  }
+
+  sayHiLater();
+
+  ```
+
+* All functions in javascript has access to the special methods such as `call`, `apply` and `bind`.
+
+* **_Bind:_**
+
+    Bind method return a new copy of the function. Reference of `this` object is passed as parameter to the bind method. It does not execute the function.
+
+  ```javascript
+
+  var person = {
+    firstName: 'Syed',
+    lastName: 'Pasha',
+    getFullName: function() {
+      var fullName = this.firstName + ' ' + this.lastName;
+      return fullName;
+    }
+  }
+
+  var logName = function(lang1, lang2) {
+    console.log('Logged: ' + this.getFullName());
+    console.log('Arguments: ', lang1, lang2);
+  }
+
+  logName(); // This will throw an error, as undefined is not a function
+
+  var logPersonName = logName.bind(person); // Here this will point to person object
+
+  logPersonName('en');
+
+  ```
+
+* **_Call:_**
+
+  Call method works similar to the function call, except let us control the `this` reference to that function. Call method actually executes the function.
+
+  ```javascript
+
+  var person = {
+    firstName: 'Syed',
+    lastName: 'Pasha',
+    getFullName: function() {
+      var fullName = this.firstName + ' ' + this.lastName;
+      return fullName;
+    }
+  }
+
+  var logName = function(lang1, lang2) {
+    console.log('Logged: ' + this.getFullName());
+    console.log('Arguments: ', lang1, lang2);
+  }
+
+  logName.call(person); // Here function is executed with 'this' reference of 'person' object
+
+  logName.call(person, 'en', 'es'); // argument can also be passed
+
+  ```
+
+* **_Apply:_**
+
+  Its very similar to `call` method, except the arguments are passed inside an array.
+
+  ```javascript
+
+  var person = {
+    firstName: 'Syed',
+    lastName: 'Pasha',
+    getFullName: function() {
+      var fullName = this.firstName + ' ' + this.lastName;
+      return fullName;
+    }
+  }
+
+  var logName = function(lang1, lang2) {
+    console.log('Logged: ' + this.getFullName());
+    console.log('Arguments: ', lang1, lang2);
+  }
+
+  logName.apply(person, ['en', 'es']); // argument has to be passed inside an array
+
+  // Example 2:
+  // Function borrowing: borrowing methods from other objects
+
+  var person2 = {
+    firstName: 'Afroz',
+    lastName: 'Pasha'
+  }
+
+  person.getFullName.apply(person2);
+
+  ```
+
+* **_Function Currying:_**
+
+  Creating a copy of a function but with some preset/default parameters. Its very useful in mathematical situation.
+
+  ```javascript
+
+  // Function Currying
+  function multiply(a, b) {
+    return a * b;
+  }
+
+  var multipleByTwo = multiply.bind(this, 2); // Here the first parameter is always set to 2
+
+  multipleByTwo(4); // Here 4 will act as second parameter
+
+  ```
