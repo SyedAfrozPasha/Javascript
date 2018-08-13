@@ -36,7 +36,7 @@ Javascript
 
 * **_Execution context (Global)_:**
   * Execution context (Global) creates two things: _Global Object ('window' is case of browsers)_ and special variable called _'this'_.
-  * This is been created by javascript engine.
+  * Its been created by javascript engine.
   * Each window/tab has its own global execution context.
   * At global level, global object (window) is equal to 'this'.
   * Execution context is created in two phases: **_Creation Phase_** and **_Execution Phase_**
@@ -96,8 +96,8 @@ Javascript
   3. In Execution Phase, Code is executed line by line.
   4. When it reached the line `a()`, a new execution context is created and placed on the top of _Execution Stack_. Then it run that code.
   5. Now when it reaches the line `b()`, a new execution context is created and placed on top on the `a()` execution context. Then it run that code.
-  6. When `b()` is executed, its popped-off the execution stack.
-  7. Similarly, if `a()` is executed, its popped-off the execution stack.
+  6. Then `b()` is executed and popped-off the execution stack.
+  7. Similarly, `a()` is executed and popped-off the execution stack.
 
 * Every function creates a new execution context and placed on top of the execution stack. When function is finishes execution, its popped-off the execution stack.
 
@@ -155,8 +155,8 @@ Javascript
 
   ```javascript
   // Example 2:
-  // Here `b()` is lexically sitting in the a() lexical environment.
-  // and a() is lexically sitting in the global lexical environment.
+  // Here `b()` is lexically sitting in the `a()` lexical environment.
+  // and `a()` is lexically sitting in the global lexical environment.
   function a() {
 
     function b() {
@@ -299,7 +299,9 @@ Javascript
 
 * Object can have properties and methods. i.e, A object can have a _Primitive_ property, _Object_ property and _Function_ method. Object is sitting in memory and will have references to the addresses/spaces in memory of its properties and method.
 
-* Object is said to have property if its value is _Primitive_ and method if its value is _Function_.
+* Object is said to have 
+  * _property_ - if its value is _Primitive_
+  * _method_ - if its value is _Function_.
 
 * Functions inside an object is called as _method_.
 
@@ -859,7 +861,7 @@ Javascript
 
 * **_Call:_**
 
-  Call method works similar to the function call, except let us control the `this` reference to that function. Call method actually executes the function.
+  Call method works similar to the function call, except it let us control the `this` reference of that function. Call method actually executes the function.
 
   ```javascript
 
