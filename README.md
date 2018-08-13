@@ -933,3 +933,194 @@ Javascript
   multipleByTwo(4); // Here 4 will act as second parameter
 
   ```
+
+* **_Functional Programming:_**
+
+  Using first-class functions to segment the code.
+
+  ```javascript
+  
+  // Example of Function programming
+
+  // Example 1
+  function mapForEach(arr, fn) {
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+      newArr.push(
+        fn(arr[i])
+      )
+    }
+
+    return newArr;
+  }
+
+  var arr1 = [1, 2, 3];
+  console.log(arr1);
+
+  var arr2 = mapForEach(arr1, function(item) {
+    return item * 2;
+  });
+
+  console.log(arr2);
+
+
+  // Example 2
+  var checkPastLimit = function(limiter, item) {
+    return item > limiter;
+  }
+
+  var arr3 = mapForEach(arr1, checkPastLimit.bind(this, 1));
+
+  console.log(arr3);
+
+  // Example 3
+  var checkPastLimitSimplified = function(limiter) {
+    return function(limiter, item) {
+      return item > limiter;
+    }.bind(this, limiter)
+  }
+
+  var arr4 = mapForEach(arr1, checkPastLimitSimplified(2));
+
+  console.log(arr4);
+
+  // Example 4
+  // Using underscore.js library
+
+  var arr5 = _.map(arr1, function (item) {
+    return item * 3;
+  })
+
+  console.log(arr5);
+
+  var arr6 = _.filter([2,3,4,5,6,7], function(item) {
+    return item % 2 === 0;
+  });
+
+  console.log(arr6);
+
+  ```
+
+* **_Inheritance:_**
+
+  One object gets access to the properties and methods of another object. Javascript uses prototypal inheritance.
+
+* **_Prototype:_**
+
+  * Each object has its own prototype called _proto_, which is also a object.
+  * Object can share the prototype of other object.
+  * If any property is not found in the given object, then it will look up the _prototype chain_ for that property in proto object.
+
+  ```javascript
+
+  var person = {
+    firstName: 'Default',
+    lastName: 'Default',
+    getFullName: function() {
+      var fullName = this.firstName + ' ' + this.lastName;
+      return fullName;
+    }
+  }
+
+  var syed = {
+    firstName: 'Syed',
+    lastName: 'Pasha'
+  }
+
+  // don't do this EVER! for demo purposes only!
+  syed.__proto__ = person;
+  console.log(syed.getFullName()); // output: Syed Pasha
+  console.log(syed.firstName); // output: Syed
+
+  var afroz = {
+    firstName: 'Afroz'
+  }
+
+  afroz.__proto__ = person;
+  console.log(afroz.getFullName()); // output: Afroz Default
+  console.log(afroz.firstName); // output: Afroz
+
+  ```
+
+* A prototype of a prototype is an object.
+
+* A base object is a bottom of prototype chain.
+
+* A base object doesn't have a prototype.
+
+  ```javascript
+
+  var a = {};
+  var b = function() {};
+  var c = [];
+
+  a.__proto__ ; // This will return a 'base object' - {}
+  // This will have properties and methods of object
+
+
+  b.__proto__ ; // This will return an 'empty function object' - function Empty() {}
+  // This will be the prototype of all the function in javascript
+  // This will have properties and methods of function
+
+
+  c.__proto__ ; // This will return an empty array
+  // This will have properties and methods of array
+
+  ```
+
+* **_Reflection:_**
+
+  An object can look at itself, listing and changing its properties and methods.
+
+  ```javascript
+
+  var person = {
+    firstName: 'Default',
+    lastName: 'Default',
+    getFullName: function() {
+      var fullName = this.firstName + ' ' + this.lastName;
+      return fullName;
+    }
+  }
+
+  var syed = {
+    firstName: 'Syed',
+    lastName: 'Pasha'
+  }
+
+  // don't do this EVER! for demo purposes only!
+  syed.__proto__ = person;
+
+  // Reflection
+  for (var prop in syed) {
+    console.log(prop + ': ' + syed[prop]);
+  }
+
+  for (var prop in syed) {
+    if (syed.hasOwnProperty(prop)) {
+      console.log(prop + ': ' + syed[prop]);
+    }
+  }
+
+  // Extend
+  // Using underscore.js
+
+  var b = {
+    address: '111 Main St.'
+    getFormalFullName: function() {
+      return this.lastName + ', ' + this.firstName
+    }
+  }
+
+
+  var c = {
+    getFirstName: function() {
+      return firstName;
+    }
+  }
+
+  _.extend(syed, b, c);
+
+  console.log(syed);
+
+  ```
