@@ -1126,3 +1126,11 @@ Javascript
   console.log(syed);
 
   ```
+
+* **_Method Chaining:_**
+
+  Calling one method after another, and each method affects the parent object. So `obj.method1().method2()`, where both methods end up with a `this` variable pointing to `obj`.
+
+* **_Transpile:_**
+
+  Convert the syntax of one programming language, to another.
