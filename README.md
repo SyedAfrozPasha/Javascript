@@ -299,7 +299,7 @@ Javascript
 
 * Object can have properties and methods. i.e, A object can have a _Primitive_ property, _Object_ property and _Function_ method. Object is sitting in memory and will have references to the addresses/spaces in memory of its properties and method.
 
-* Object is said to have 
+* Object is said to have
   * _property_ - if its value is _Primitive_
   * _method_ - if its value is _Function_.
 
@@ -380,7 +380,7 @@ Javascript
 
 * In Javascript, Functions are object.
   
-* In Javascript, Function object has some hidden special properties such as 
+* In Javascript, Function object has some hidden special properties such as
   * _Name:_ Optional property - A function can have name or it can be anonymous (function without name).
   * _Code:_ its the actual line of code which we have written sit. It can be invocable (run this piece of code).
 
@@ -1126,6 +1126,221 @@ Javascript
   console.log(syed);
 
   ```
+
+* **_Function constructor:_**
+
+  A normal function that is used to construct objects. The 'this' variable points a new empty object, and that object is returned from the function automatically.
+
+  ```javascript
+
+  function Person() {
+    this.firstName = 'Syed';
+    this.lastName = 'Pasha';
+  }
+
+  // Another way of creating object in javascript
+  var syed = new Person(); // Here 'new' is an operator
+  // Here 'new' operator will create empty object and then add/call the Person function, with the 'this' variable point to empty object
+  console.log(syed);
+
+  // ---------------------------
+
+  function Person(firstName,lastName) {
+    console.log(this);
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  var syed = new Person('Syed', 'Pasha');
+
+  console.log(syed);
+
+  var afroz = new Person('Afroz', 'Pasha');
+
+  console.log(afroz);
+
+  ```
+
+* All Functions in javascript has some properties such as:
+  * Name
+  * Code
+  * prototype: Its used only by the `new` operator. its not the prototype of the function. Its a prototype of any object created using function contructor.
+
+* Any object created with function constructor, can be added with new features using _prototype_ property of function constructor.
+
+* Methods created using prototype can be resued in all the object without creating a new memory space for that function/method.
+
+  ```javascript
+
+  function Person(firstName,lastName) {
+    console.log(this);
+    this.firstName = firstName;
+    this.lastName = lastName;
+    console.log('This function is invoked.');
+  }
+
+  Person.prototype.getFullName = function () {
+    return this.firstName + ' ' + this.lastName;
+  }
+
+  var syed = new Person('Syed', 'Pasha');
+
+  console.log(syed);
+
+  var afroz = new Person('Afroz', 'Pasha');
+
+  console.log(afroz);
+
+  Person.prototype.getFormalFullName = function () {
+    return this.lastName + ', ' + this.firstName;
+  }
+
+  console.log(syed.getFormalFullName());
+
+  ```
+
+* For prototype to work, we should define a function using `new` keyword. And the name of that function (function constructor) should be starting with Capital letter.
+
+* Built-in function constructor:
+
+  ```javascript
+
+  // Here a will have property of number
+  // This will create object
+  var a = new Number('3');
+  console.log(a);
+  
+  // Here b will have property of string
+  var b = new String('Syed');
+  console.log(b);
+
+  // We can add new feature using prototype
+  String.prototype.isLengthGreaterThan = function(limit) {
+    return this.length > limit;
+  }
+
+  console.log("Syed".isLengthGreaterThan(3));
+
+  // --------------------------------
+
+  var a = 3; // This one is primitive value
+  var b = new Number(3); // This one will have object created with function constructor
+  // This type of defining a variable should be avoided
+
+  a == b // true
+
+  a === b // false
+
+  ```
+
+* Its better not to used built-in function constructors, instead use actual primitive values.
+
+* For iteration an array, don't use `for...in` instead use `for(var i = 0....)`.
+
+  ```javascript
+
+  Array.propotype.myCustomFeature = 'cool';
+
+  var arr = ['a', 'b', 'c'];
+
+  for (var prop in arr) {
+    console.log(prop + ': ' + arr[prop]);
+  }
+
+  ```
+
+* Pure prototypal inheritance:
+
+  * `Object.create()` creates an empty object with its prototype pointing to what ever that is passed into the `Object.create()`.
+
+  ```javascript
+
+  var person = {
+    firstName: 'Default',
+    lastName: 'Default',
+    greet: function() {
+      return 'Hi ' + this.firstName;
+    }
+  }
+
+  var syed = Object.create(person);
+  console.log(syed); // returns Empty object, but prototype will have properties and methods of person object.
+
+  syed.firstName = 'Syed';
+  syed.lastName = 'Pasha';
+
+  console.log(syed);
+
+  ```
+
+* **_Polyfill:_**
+
+  code that adds a feature which the engine may lack.
+
+* ES6 and Classes:
+
+  ```javascript
+
+  // Another way of creating an object
+
+  // Here 'extends' keyword sets the prototype
+  class InformalPerson extends Person {
+    constructor (firstName, lastName) {
+      super(firstName, lastName); // This will call the constructor of object which is the prototype
+    }
+
+    greet() {
+      return 'Yo ' + firstName;
+    }
+  }
+
+  ```
+
+* Syntactic Sugar: A different way to type something that doesn't change how it works under the hood.
+
+* **_typeof and instanceof:_**
+  
+  * `typeof` is an operator that returns a string with the type of whatever you pass.
+
+  * The `typeof` operator checks if a value belongs to one of the six basic types: `number`, `string`, `boolean`, `object`, `function` or `undefined`.
+
+  * `instanceof` is much more intelligent: it works on the level of prototypes. In particular, it tests to see if the right operand appears anywhere in the prototype chain of the left.
+
+  ```javascript
+
+  var a = 3;
+  console.log(typeof a); // number
+
+  var b = "Hello";
+  console.log(typeof b); // string
+
+  var c = {};
+  console.log(typeof c); // object
+
+  var d = [];
+  console.log(typeof d); // object
+  // Better approach
+  console.log(Object.prototype.toString.call(d)); // [object Array]
+
+  function Person(name) {
+    this.name = name;
+  }
+
+  var e = new Person('Syed');
+  console.log(typeof e); // object
+  console.log(e instanceof Person); // true
+
+  console.log(typeof undefined); // undefined
+  console.log(typeof null); // object
+
+  var f = function() { };
+  console.log(typeof f); // function
+
+  ```
+
+* **_Strict Mode:_**
+
+  It tell the javascript engine to implement some strict rules while parsing the code. Using`'use strict'` in the code enables the strict mode.
 
 * **_Method Chaining:_**
 
