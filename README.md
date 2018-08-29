@@ -170,7 +170,53 @@ Basics
   * _rejected_: failed operation.
   * _settled_: the Promise is either fulfilled or rejected, but not pending.
 
-  ![Promise](https://mdn.mozillademos.org/files/8633/promises.png "Promise")
+  ![Promises](https://mdn.mozillademos.org/files/8633/promises.png "Promises")
+
+  [Read more on Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+* The difference between a `for...of` loop and a `for...in` loop - While `for...in` iterates over **property names**, `for...of` iterates over **property values**.
+
+* **_Function:_**
+
+  Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure — a set of statements that performs a task or calculates a value.
+
+  Simple Function to calculate the factorial:
+
+  ```javascript
+
+  var factorial = function fac(n) {
+    return n < 2 ? 1 : n * fac(n - 1);
+  };
+
+  console.log(factorial(3));
+
+  ```
+
+* **_Recursive function:_**
+
+  A function that calls itself is called a _recursive function_.
+
+* A function can refer to and call itself. There are three ways for a function to refer to itself:
+
+  1. the function's name
+  2. `arguments.callee`
+  3. an in-scope variable that refers to the function
+
+  For example, consider the following function definition:
+
+  ```javascript
+
+  var foo = function bar() {
+    // statements go here
+  };
+
+  ```
+
+  Within the function body, the following are all equivalent:
+
+  1. `bar()`
+  2. `arguments.callee()`
+  3. `foo()`
 
 Advanced
 --------
