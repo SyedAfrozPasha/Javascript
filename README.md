@@ -93,6 +93,85 @@ Basics
 
 * JavaScript is a dynamically typed language. That means you don't have to specify the data type of a variable when you declare it, and data types are converted automatically as needed during script execution.
 
+* A regex literal is a pattern enclosed between slashes.
+
+* **_Conditional statements:_**
+
+  A conditional statement is a set of commands that executes if a specified condition is true. JavaScript supports two conditional statements: `if...else` and `switch`.
+
+* **_Falsy values:_**
+
+  A falsy value is a value that translates to false when evaluated in a Boolean context.
+
+  The following values evaluate to false (also known as Falsy values):
+
+  * `false`
+  * `undefined`
+  * `null`
+  * `0`
+  * `NaN`
+  * the empty string (`""`)
+
+* Do not confuse the primitive boolean values true and false with the true and false values of the Boolean object. For example:
+
+  ```javascript
+
+  var b = new Boolean(false);
+  if (b) // this condition evaluates to true
+  if (b == true) // this condition evaluates to false
+
+  ```
+
+* **_Exception handling statements:_**
+
+  You can throw exceptions using the `throw` statement and handle them using the `try...catch` statements.
+
+* You can use a `catch` block to handle all exceptions that may be generated in the `try` block.
+
+  ```javascript
+
+  try {
+    throw 'myException'; // generates an exception
+  }
+  catch (e) {
+    // statements to handle any exceptions
+    logMyErrors(e); // pass exception object to error handler
+  }
+
+  ```
+
+* The `finally` block contains statements to execute after the try and catch blocks execute but before the statements following the `try...catch` statement. The `finally` block executes whether or not an exception is thrown. If an exception is thrown, the statements in the `finally` block execute even if no `catch` block handles the exception.
+
+  ```javascript
+
+  openMyFile();
+  try {
+    writeMyFile(theData); //This may throw an error
+  } catch(e) {  
+    handleError(e); // If we got an error we handle it
+  } finally {
+    closeMyFile(); // always close the resource
+  }
+
+  ```
+
+* If the `finally` block returns a value, this value becomes the return value of the entire `try-catch-finally` production, regardless of any `return` statements in the `try` and `catch` blocks.
+
+* Overwriting of `return` values by the `finally` block also applies to exceptions thrown or re-thrown inside of the `catch` block.
+
+  [Read more on Exception handling statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Exception_handling_statements)
+
+* **_Promises:_**
+
+  A Promise is in one of these states:
+
+  * _pending_: initial state, not fulfilled or rejected.
+  * _fulfilled_: successful operation
+  * _rejected_: failed operation.
+  * _settled_: the Promise is either fulfilled or rejected, but not pending.
+
+  ![Promise](https://mdn.mozillademos.org/files/8633/promises.png "Promise")
+
 Advanced
 --------
 
