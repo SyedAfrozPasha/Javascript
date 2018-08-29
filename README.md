@@ -1,6 +1,96 @@
 Javascript
 ==========
 
+Basics
+------
+
+* JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.x. having complex animations, clickable buttons, popup menus, etc.).  There are also more advanced server side versions of javascript such as Node.Js which allow you to add more functionality to a website than simply downloading files (such as realtime collaboration between multiple computers).
+
+* JavaScript is case-sensitive and uses the Unicode character set.
+
+* In JavaScript, instructions are called _statements_ (it is a line of code commanding a task. Every program consists of a sequence of statements.) and are separated by semicolons `;`.
+
+* The source text of JavaScript script gets scanned from left to right and is converted into a sequence of input elements which are tokens, control characters, line terminators, comments, or whitespace. Spaces, tabs, and newline characters are considered whitespace.
+
+* **_Comments:_**
+
+  Comments behave like whitespace and are discarded during script execution.
+
+  ```javascript
+
+  // a one line comment
+
+  /* this is a longer, 
+  * multi-line comment
+  */
+
+  ```
+
+* **_Identifier:_**
+
+  A sequence of characters in the code that identifies a variable, function, or property.
+
+* In JavaScript, _identifiers_ can contain only alphanumeric characters (or `$` or `_` ), and may not start with a digit.
+
+* **_Declarations:_**
+
+  There are three kinds of declarations in JavaScript.
+
+  1. `var`
+
+      Declares a variable, optionally initializing it to a value.
+
+  2. `let`
+
+      Declares a block-scoped, local variable, optionally initializing it to a value.
+
+  3. `const`
+
+      Declares a block-scoped, read-only named constant.
+
+* A variable declared using the `var` or `let` statement with no assigned value specified has the value of undefined.
+
+* A constant cannot change value through assignment or be re-declared while the script is running. It must be initialized to a value. However, the properties of `objects` or `array` assigned to constants are not protected (i.e. We can change the value inside the object or array).
+
+* The `undefined` value behaves as `false` when used in a boolean context.
+
+* The `undefined` value converts to `NaN` when used in numeric context.
+
+  ```javascript
+
+  var a; // a is undefined
+  a + 2; // return NaN
+
+  ```
+
+* When you evaluate a `null` variable, the `null` value behaves as `0` in numeric contexts and as `false` in boolean contexts.
+
+* When you declare a variable outside of any function, it is called a _global variable_, because it is available to any other code in the current document.
+
+* When you declare a variable within a function, it is called a _local variable_, because it is available only within that function.
+
+* _Hoisting_: Variables in JavaScript are in a sense "hoisted" or lifted to the top of the function or statement. Variables that are hoisted return a value of `undefined`.
+
+* Because of _hoisting_, all `var` statements in a function should be placed as near to the top of the function as possible. This best practice increases the clarity of the code.
+
+* In ECMAScript 2015 (ES6), `let` (`const`) does not hoist the variable to the top of the block. Referencing the variable in the block before the variable declaration results in a `ReferenceError`. The variable is in a "temporal dead zone" from the start of the block until the declaration is processed.
+
+  ```javascript
+
+  console.log(x); // ReferenceError
+  let x = 3;
+
+  ```
+
+* For functions, only the function declaration gets hoisted to the top and not the function expression.
+
+* _Global variables_ are in fact properties of the global object. In web pages, the global object is window, so you can set and access global variables using the `window.variable` syntax.
+
+* JavaScript is a dynamically typed language. That means you don't have to specify the data type of a variable when you declare it, and data types are converted automatically as needed during script execution.
+
+Advanced
+--------
+
 * **_Syntax Parser_:**
   
   A program that reads your code and determines what it does and if its grammar or syntax is valid.
@@ -35,12 +125,12 @@ Javascript
   ```
 
 * **_Execution context (Global)_:**
-  * Execution context (Global) creates two things: _Global Object ('window' is case of browsers)_ and special variable called _'this'_.
+  * Execution context (Global) creates two things: _Global Object (`window` is case of browsers)_ and special variable called _`this`_.
   * Its been created by javascript engine.
   * Each window/tab has its own global execution context.
-  * At global level, global object (window) is equal to 'this'.
+  * At global level, global object (`window`) is equal to `this`.
   * Execution context is created in two phases: **_Creation Phase_** and **_Execution Phase_**
-  * In _Creation Phase_, Global Object, 'this', Outer environment and Hoisting are created.
+  * In _Creation Phase_, Global Object, `this`, Outer environment and Hoisting are created.
   * In _Creation Phase_, Parser runs through the code and begins to setup translations such as where we have created variables or functions and setup memory space for variables and functions. This is called '**_Hoisting_**'.
 * All variables is javascript is initial set to _undefined_ by javascript engine.
 * _undefined_ is a special keyword or value in javascript. Its also one of a data type in javascript. It is assigned to a variable _which is declared but not defined_ by javascript engine.
@@ -206,9 +296,9 @@ Javascript
 
   There are 6 Primitive types in javascript:
 
-  1. **Undefined**: It represents lack of existence. It shouldn't be set/assigned to a variable.
+  1. **undefined**: It represents lack of existence. It shouldn't be set/assigned to a variable.
 
-  2. **Null**: It also represents lack of existence. It can be set/assigned to a variable.
+  2. **null**: It also represents lack of existence. It can be set/assigned to a variable. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.
 
   3. **Boolean**: It represents the values such as `true` or `false`.
 
@@ -216,7 +306,7 @@ Javascript
 
   5. **String**: It is a sequence of characters enclosed in single or double quotes.
 
-  6. **Symbol**: Its used in ES6 and next version. Its not fully supported by older browsers.
+  6. **Symbol**: Its used in ES6 and next version. Its not fully supported by older browsers. It is a data type whose instances are unique and immutable.
 
 * **_Operators:_**
 
@@ -411,7 +501,7 @@ Javascript
 
   A unit of code that doesn't results in a value. Statement doesn't return a value.
 
-* Function Expression aren't hoisted. Only variable are hoisted.
+* Function Expression aren't hoisted. Only variable and function declaration are hoisted.
 
   ```javascript
 
@@ -1129,7 +1219,7 @@ Javascript
 
 * **_Function constructor:_**
 
-  A normal function that is used to construct objects. The 'this' variable points a new empty object, and that object is returned from the function automatically.
+  A normal function that is used to construct objects. The `this` variable points a new empty object, and that object is returned from the function automatically.
 
   ```javascript
 
