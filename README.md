@@ -3,9 +3,8 @@ Javascript
 
 ### Table of Contents
 
-[Basics](https://github.com/SyedAfrozPasha/Javascript/tree/develop#basics)
-
-[Advanced](https://github.com/SyedAfrozPasha/Javascript/tree/develop#advanced)
+* [Basics](https://github.com/SyedAfrozPasha/Javascript/tree/develop#basics)
+* [Advanced](https://github.com/SyedAfrozPasha/Javascript/tree/develop#advanced)
 
 Basics
 ------
