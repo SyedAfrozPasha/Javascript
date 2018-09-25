@@ -64,9 +64,48 @@ Javascript
 
     ```
 
-4. Write a program to find whether the given string in a palindrome or not (with and without built-in javascript methods).
+4. Write a program to find whether the given string in a palindrome or not (with and without built-in javascript string methods).
+
+    ```javascript
+
+    // With built-in string methods
+    function isPalindrome(str) {
+      // remove special characters, spaces and make lowercase
+      let removeChar = str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+      // reverse removeChar for comparison
+      let checkPalindrome = removeChar.split('').reverse().join('');
+
+      // Check to see if str is a Palindrome
+      return (removeChar === checkPalindrome);
+    }
+
+    // Without build-in string methods
+    function isPalindrome(str) {
+      const len = Math.floor(str.length / 2);
+      for (let i = 0; i < len; i++) {
+        if (str[i] !== str[str.length - i - 1]) return false;
+      }
+      return true;
+    }
+
+    ```
 
 5. Write a program to find factorial of a given number (also handle 0!).
+
+    ```javascript
+
+    function findFactorial(num) {
+      if (num < 0) {
+        return -1;
+      } else if (num === 0) {
+        return 1;
+      } else {
+        return (num * findFactorial(num - 1));
+      }
+    }
+
+    ```
 
 6. Find a maximum number present in a given array using `Math.max()` built-in method in both ES5 and ES6.
 
