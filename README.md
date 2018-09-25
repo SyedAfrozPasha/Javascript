@@ -1,6 +1,15 @@
 Interview Questions
 ===================
 
+Table of Contents
+-----------------
+
+* [Javascript](https://github.com/SyedAfrozPasha/Javascript/tree/interview#basics)
+* [React.JS](https://github.com/SyedAfrozPasha/Javascript/tree/interview#reactjs)
+* [Node.JS](https://github.com/SyedAfrozPasha/Javascript/tree/interview#nodejs)
+* [HTML](https://github.com/SyedAfrozPasha/Javascript/tree/interview#html)
+* [CSS](https://github.com/SyedAfrozPasha/Javascript/tree/interview#css)
+
 Javascript
 ----------
 
@@ -19,7 +28,7 @@ Javascript
 13. AJAX: What is AJAX?
 14. jQuery: List the different types of jQuery selectors?
 
-### Coding Questions:
+### Javascript Coding Questions:
 
 1. Assume two variables `a` and `b` having an object with the different `firstName` values. Add another property to both the object `lastName` with the value of `Doe` in a single line of code.
   
@@ -131,7 +140,7 @@ CSS
 4. How can we define variables in CSS?
 5. What is the difference between `display:hidden` and `visibility:hidden` properties in CSS?
 
-### Coding Questions:
+### CSS Coding Questions:
 
   1. What will be the background color of the `div`?
 
