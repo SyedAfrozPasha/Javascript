@@ -1,7 +1,8 @@
 Javascript
 ==========
 
-### Table of Contents
+Table of Contents
+-----------------
 
 * [Basics](https://github.com/SyedAfrozPasha/Javascript/tree/develop#basics)
 * [Advanced](https://github.com/SyedAfrozPasha/Javascript/tree/develop#advanced)
@@ -262,7 +263,7 @@ Advanced
   * Execution context is created in two phases: **_Creation Phase_** and **_Execution Phase_**
   * In _Creation Phase_, Global Object, `this`, Outer environment and Hoisting are created.
   * In _Creation Phase_, Parser runs through the code and begins to setup translations such as where we have created variables or functions and setup memory space for variables and functions. This is called '**_Hoisting_**'.
-* All variables is javascript is initial set to _undefined_ by javascript engine.
+* All variables in javascript are initially set to _undefined_ by javascript engine.
 * _undefined_ is a special keyword or value in javascript. Its also one of a data type in javascript. It is assigned to a variable _which is declared but not defined_ by javascript engine.
 * Defining a variable with _undefined_ is a bad practice and should be avoided.
 
@@ -752,9 +753,9 @@ Advanced
   var c = {
     name: 'value',
     log: function() {
-      this.name : 'Updated value' // this will mutate the 'name' value
+      this.name = 'Updated value'; // this will mutate the 'name' value
 
-      console.log(this); // output: {name: 'value',log: function() {console.log(this);}}
+      console.log(this); // output: {name: 'Updated value',log: function() {console.log(this);}}
       // Here 'this' points to the 'c' object
       // It points to the object contains 'this'
 
@@ -779,7 +780,7 @@ Advanced
     log: function() {
       var self = this; // assigning the reference of 'this' to a variable
 
-      self.name : 'Updated value' // this will mutate the 'name' value
+      self.name = 'Updated value'; // this will mutate the 'name' value
 
       console.log(self); // Here 'this' points to the 'c' object
 
@@ -1428,11 +1429,11 @@ Advanced
   // Here a will have property of number
   // This will create object
   var a = new Number('3');
-  console.log(a);
+  console.log(a); // Number {3}
   
   // Here b will have property of string
   var b = new String('Syed');
-  console.log(b);
+  console.log(b); // String {"Syed"}
 
   // We can add new feature using prototype
   String.prototype.isLengthGreaterThan = function(limit) {
