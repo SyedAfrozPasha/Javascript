@@ -19,8 +19,8 @@ Javascript
 4. Explain `bind`, `call` and `apply` in javascript?
 5. What is Event Bubbling and Event Capturing in javascript?
 6. What is Closure in javascript?
-7. What is `Splice` and `Slice` in javascript?
-8. What is `Map`, `Filter` and `Reduce` in javascript?
+7. What is `splice` and `slice` in javascript?
+8. What is `map`, `filter` and `reduce` in javascript?
 9. Difference between the `setInterval` and `setTimeout` in javascript?
 10. What is callback hell in javascript and How can it be avoided?
 11. What is `module.export` in javascript?
