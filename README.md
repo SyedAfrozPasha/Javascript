@@ -12,11 +12,12 @@ Javascript
 6. What is Closure in javascript?
 7. What is `Splice` and `Slice` in javascript?
 8. What is `Map`, `Filter` and `Reduce` in javascript?
-9. What is AJAX?
-10. Difference between the `setInterval` and `setTimeout` in javascript?
-11. What is callback hell in javascript and How can it be avoided?
-12. What is `module.export` in javascript?
-13. What is the `typeof` string, object and array in javascript?
+9. Difference between the `setInterval` and `setTimeout` in javascript?
+10. What is callback hell in javascript and How can it be avoided?
+11. What is `module.export` in javascript?
+12. What is the `typeof` string, object and array in javascript?
+13. AJAX: What is AJAX?
+14. jQuery: List the different types of jQuery selectors?
 
 ### Coding Questions:
 
@@ -75,28 +76,28 @@ Javascript
 React.JS
 --------
 
-1. How do you create/define a component in react?
-2. What is the purpose of `render()` method in react?
-3. Difference between `state` and `props` in react? or What is `state` and `props` in react?
-4. How can we pass the props to a component in react?
-5. What is Pure functions/components in react?
+1. What is React.js?
+2. What is Virtual DOM in react?
+3. Difference between React.js and other JS frameworks such as Angular or Vue.js?
+4. What is the main advantage of using React.js when compared to the other JS frameworks such as Angular or Vue.js? or Why React.js is better than Angular or Vue.js?
+5. Difference between `state` and `props` in react? or What is `state` and `props` in react?
 6. What is Higher Order Components (HOC) in react?
-7. What is Virtual DOM in react?
-8. How does react works internally? (Virtual DOM)
-9. What are the advantages of React.js?
-10. What are the life cycle methods in react?
-11. For calling API's, which life cycle method of React.js should we use and why?
-12. What is JSX in react?
-13. What is stateful and stateless component in react?
-14. What do you mean by `React.Component` and `React.PureComponent` syntax in react and when are they used?
-15. What is the purpose of `super()` method in react?
-16. What is Redux?
-17. Difference between React.js and other JS frameworks such as Angular or Vue.js?
-18. What is the main advantage of using React.js when compared to the other JS frameworks such as Angular or Vue.js? or Why React.js is better than Angular or Vue.js?
-19. Explain MVC pattern?
-20. Explain any state management architecture (Flux, Redux or MobX)?
-21. What is React.js?
-22. Whether `this.setState()` in react is an asynchronous call or synchronous call?
+7. How does react works internally? (Virtual DOM)
+8. What are the advantages of React.js?
+9. How do you create/define a component in react?
+10. What is the purpose of `render()` method in react?
+11. How can we pass the props to a component in react?
+12. What is Pure functions/components in react?
+13. What are the life cycle methods in react?
+14. For calling API's, which life cycle method of React.js should we use and why?
+15. What is JSX in react?
+16. What is stateful and stateless component in react?
+17. What do you mean by `React.Component` and `React.PureComponent` syntax in react and when are they used?
+18. What is the purpose of `super()` method in react?
+19. Whether `this.setState()` in react is an asynchronous call or synchronous call?
+20. MVC: Explain MVC pattern?
+21. Redux: What is Redux?
+22. Explain any state management architecture (Flux, Redux or MobX)?
 
 Node.JS
 -------
@@ -128,3 +129,59 @@ CSS
 2. List some of the CSS selector?
 3. What is flex in CSS?
 4. How can we define variables in CSS?
+5. What is the difference between `display:hidden` and `visibility:hidden` properties in CSS?
+
+### Coding Questions:
+
+  1. What will be the background color of the `div`?
+
+      ```html
+      <div id="myDiv" class="myClass">TEXT</div>
+      ```
+      ```css
+      #myDiv {
+        background-color: red;
+      }
+
+      .myClass {
+        background-color: green;
+      }
+      ```
+
+  2. Write CSS to change the font color of 3rd, 7th and 8th `li` element to `red`.
+
+      ```html
+      <ul>
+        <li>TEXT1</li>
+        <li>TEXT2</li>
+        <li>TEXT3</li>
+        <li>TEXT4</li>
+        <li>TEXT5</li>
+        <li>TEXT6</li>
+        <li>TEXT7</li>
+        <li>TEXT8</li>
+        <li>TEXT9</li>
+        <li>TEXT10</li>
+      </ul>
+      ```
+      ```css
+      li:nth-child(3) {
+        color: red;
+      }
+
+      li:nth-child(7) {
+        color: red;
+      }
+
+      li:nth-child(8) {
+        color: red;
+      }
+      ```
+  
+  3. Write CSS to change the background color of alternative rows of the table to grey.
+
+      ```css
+      table>tr:nth-child(2n) {
+        background-color: grey;
+      }
+      ```
