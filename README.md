@@ -16,6 +16,61 @@ Javascript
 10. Difference between the `setInterval` and `setTimeout` in javascript?
 11. What is callback hell in javascript and How can it be avoided?
 12. What is `module.export` in javascript?
+13. What is the `typeof` string, object and array in javascript?
+
+### Coding Questions:
+
+1. Assume two variables `a` and `b` having an object with the different `firstName` values. Add another property to both the object `lastName` with the value of `Doe` in a single line of code.
+  
+    ```javascript
+
+    var a = { firstName: 'John' };
+    var b = { firstName: 'Jane' };
+
+    // Solution
+    a['lastName'] = b['lastName'] = 'Doe';
+
+    ```
+
+2. What would be the output of following code?
+
+    ```javascript
+
+    console.log(10 + true); // 11
+    console.log(-'24' + 10); // -14
+    console.log('34' + 14); // 3414
+
+    ```
+
+3. What would be the output of following code?
+
+    ```javascript
+
+    var a = 'Hello';
+    var b = new String('Hello');
+
+    console.log(a == b); // true
+    console.log(a === b); // false
+
+    ```
+
+4. Write a program to find whether the given string in a palindrome or not (with and without built-in javascript methods).
+
+5. Write a program to find factorial of a given number (also handle 0!).
+
+6. Find a maximum number present in a given array using `Math.max()` built-in method in both ES5 and ES6.
+
+    ```javascript
+
+    var arr = [3, 4, 1, 5, 7, 6, 2];
+
+    // ES5
+    Math.max.apply(null, arr);
+
+    // ES6
+    Math.max(...arr);
+
+    ```
 
 React.JS
 --------
