@@ -4,9 +4,9 @@ Interview Questions
 Table of Contents
 -----------------
 
-* [Javascript](https://github.com/SyedAfrozPasha/Javascript/tree/interview#basics)
-* [React.JS](https://github.com/SyedAfrozPasha/Javascript/tree/interview#reactjs)
-* [Node.JS](https://github.com/SyedAfrozPasha/Javascript/tree/interview#nodejs)
+* [Javascript](https://github.com/SyedAfrozPasha/Javascript/tree/interview#javascript)
+* [React.js](https://github.com/SyedAfrozPasha/Javascript/tree/interview#reactjs)
+* [Node.js](https://github.com/SyedAfrozPasha/Javascript/tree/interview#nodejs)
 * [HTML](https://github.com/SyedAfrozPasha/Javascript/tree/interview#html)
 * [CSS](https://github.com/SyedAfrozPasha/Javascript/tree/interview#css)
 
@@ -185,13 +185,59 @@ Javascript
 React.js
 --------
 
-1. What is React.js?
-2. What is Virtual DOM in react?
-3. Difference between React.js and other JS frameworks such as Angular or Vue.js?
-4. What is the main advantage of using React.js when compared to the other JS frameworks such as Angular or Vue.js? or Why React.js is better than Angular or Vue.js?
-5. Difference between `state` and `props` in react? or What is `state` and `props` in react?
-6. What is Higher Order Components (HOC) in react?
-7. How does react works internally? (Virtual DOM)
+**1. What is React.js?**
+
+  * React is a front-end JavaScript library developed by Facebook in 2011.
+  * It follows the component based approach which helps in building reusable UI components.
+  * It is used for developing complex and interactive web and mobile UI.
+
+**2. What is Virtual DOM in react? or How does react works internally?**
+
+  A virtual DOM is a lightweight JavaScript object which originally is just the copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties. React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system.
+
+  This Virtual DOM works in three simple steps.
+
+  1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+  2. Then the difference between the previous DOM representation and the new one is calculated.
+  3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+
+* [How virtual dom and diffing works in react](https://medium.com/@gethylgeorge/how-virtual-dom-and-diffing-works-in-react-6fc805f9f84e)
+
+**3. Difference between React.js and other JS frameworks such as Angular or Vue.js.**
+
+  * [Comparison between React and Angular](https://www.c-sharpcorner.com/article/comparison-between-react-and-angular/)
+  * [Angular VS React VS Vue](https://medium.com/unicorn-supplies/angular-vs-react-vs-vue-a-2017-comparison-c5c52d620176)
+
+**4. What is the main advantage of using React.js when compared to the other JS frameworks such as Angular or Vue.js? or Why React.js is better than Angular or Vue.js?**
+
+  Major features of React are listed below:
+
+  * It uses the virtual DOM instead of the real DOM.
+  * It uses server-side rendering.
+  * It follows uni-directional data flow or data binding.
+
+**5. Differentiate between Real DOM and Virtual DOM.**
+
+  | Real DOM                                 | Virtual  DOM|
+  | :-------------                          |:-------------|
+  | 1. It updates slow.                      | 1. It updates faster.|
+  | 2. Can directly update HTML.             | 2. Can’t directly update HTML.|
+  | 3. Creates a new DOM if element updates. | 3. Updates the JSX if element updates.|
+  | 4. DOM manipulation is very expensive.   | 4. DOM manipulation is very easy.|
+  | 5. Too much of memory wastage.           | 5. No memory wastage.|
+
+  * [Understanding reacts virtual dom vs the real dom](https://medium.com/@hidace/understanding-reacts-virtual-dom-vs-the-real-dom-68ae29039951)
+
+**6. Difference between `state` and `props` in react? or What is `state` and `props` in react.**
+
+  * [State and Props in React](https://medium.com/@hareeshdevarasetty/what-is-the-difference-between-state-and-props-in-react-4034c71f678a)
+
+**7. What is Higher Order Components (HOC) in react?**
+
+  * [HOC - React Docs](https://reactjs.org/docs/higher-order-components.html)
+  * [HOC in depth](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
+  * [Understanding HOC](https://medium.freecodecamp.org/understanding-higher-order-components-6ce359d761b)
+
 8. What are the advantages of React.js?
 9. How do you create/define a component in react?
 10. What is the purpose of `render()` method in react?
@@ -201,7 +247,7 @@ React.js
 14. For calling API's, which life cycle method of React.js should we use and why?
 15. What is JSX in react?
 16. What is stateful and stateless component in react?
-17. What do you mean by `React.Component` and `React.PureComponent` syntax in react and when are they used?
+17. What do you mean by `React.Component` and `8eact.PureComponent` syntax in react and when are they used?
 18. What is the purpose of `super()` method in react?
 19. Whether `this.setState()` in react is an asynchronous call or synchronous call?
 20. Explain Context API in react?
