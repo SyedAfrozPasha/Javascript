@@ -143,9 +143,11 @@ React.JS
 17. What do you mean by `React.Component` and `React.PureComponent` syntax in react and when are they used?
 18. What is the purpose of `super()` method in react?
 19. Whether `this.setState()` in react is an asynchronous call or synchronous call?
-20. MVC: Explain MVC pattern?
-21. Redux: What is Redux?
-22. Explain any state management architecture (Flux, Redux or MobX)?
+20. Explain Context API in react?
+21. What is Refs in react?
+22. MVC: Explain MVC pattern?
+23. Redux: What is Redux?
+24. Explain any state management architecture (Flux, Redux or MobX)?
 
 Node.JS
 -------
