@@ -14,19 +14,80 @@ Javascript
 ----------
 
 1. What are the different ways of creating an object in javascript?
+
+    * [Ways of creating objects in javascript](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions#question-28-what-are-the-ways-of-creating-objects-in-javascript-)
+
 2. What is Namespaces in javascript?
+
+    * [JavaScript Namespace](https://www.codeproject.com/Articles/829254/JavaScript-Namespace)
+
 3. What is Prototypes in javascript?
+
+    * [Prototype in javascript](http://www.tutorialsteacher.com/javascript/prototype-in-javascript)
+    * [Javascript Prototype in plain detailed language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
+    * [Understanding prototypes in javascript](https://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/)
+
 4. Explain `bind`, `call` and `apply` in javascript?
+
+    * [bind - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+    * [call - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+    * [apply - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+    * [How to call, apply and bind in javascript](https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
+
 5. What is Event Bubbling and Event Capturing in javascript?
+
+    * [Event bubbling and Event capturing in javascript](https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e)
+    * [Event bubbling and capturing](https://javascript.info/bubbling-and-capturing)
+
 6. What is Closure in javascript?
+
+    * [Closure in Javascript](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions#question-4-what-is-closure-in-javascript-can-you-provide-an-example)
+    * [Master the javascript interview - What is a closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
+    * [Closure in detail](https://javascript.info/closure)
+
 7. What is `splice` and `slice` in javascript?
+
+    * [splice - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+    * [slice - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
 8. What is `map`, `filter` and `reduce` in javascript?
+
+    * [Functional javascript - map, filter and reduce](https://wsvincent.com/functional-javascript-map-filter-reduce/)
+    * [Javascript functional programming - map, filter and reduce](https://medium.com/jsguru/javascript-functional-programming-map-filter-and-reduce-846ff9ba492d)
+    * [reduce in javascript](https://medium.freecodecamp.org/reduce-f47a7da511a9)
+
 9. Difference between the `setInterval` and `setTimeout` in javascript?
+
+    * [setTimeout and setInterval in javascript](https://javascript.info/settimeout-setinterval)
+
 10. What is callback hell in javascript and How can it be avoided?
-11. What is `module.export` in javascript?
-12. What is the `typeof` string, object and array in javascript?
-13. AJAX: What is AJAX?
-14. jQuery: List the different types of jQuery selectors?
+
+    * [Callback hell and How to avoid it](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8?_sm_pdc=1&_sm_rid=K7jkMHt785MkPtS0sWHK4b96njnDs4MHnH9DD0N)
+
+11. What is the `typeof` string, object and array in javascript?
+
+    ```javascript
+    // String
+    let name = 'John';
+    typeof name; // "string"
+
+    // Object
+    let myObj = { name: 'Jane' };
+    typeof myObj; // "object"
+
+    // Array
+    let myArr = [1, 2, 3];
+    typeof myArr; // "object"
+    ```
+
+12. AJAX: What is AJAX?
+
+      * [AJAX - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
+
+13. jQuery: List the different types of jQuery selectors?
+
+      * [jQuery Selectors - W3School](https://www.w3schools.com/jquery/jquery_ref_selectors.asp)
+      * [Selectors - jQuery Docs](https://api.jquery.com/category/selectors/)
 
 ### Javascript Coding Questions:
 
@@ -121,7 +182,7 @@ Javascript
 
     ```
 
-React.JS
+React.js
 --------
 
 1. What is React.js?
@@ -149,7 +210,7 @@ React.JS
 23. Redux: What is Redux?
 24. Explain any state management architecture (Flux, Redux or MobX)?
 
-Node.JS
+Node.js
 -------
 
 1. How does the `process.nextTick()` works in Node.js?
@@ -157,9 +218,10 @@ Node.JS
 3. Explain any caching technologies/techniques?
 4. What is Streams in Node.js?
 5. How to handle API errors in Node.js?
-6. Sequelize: How to use Sequelize (NPM package) for Database operation?
-7. Sequelize: List some the methods in Sequelize?
-8. Express.js: How to use custom module in Express.js?
+6. What is `module.export` in Node.js?
+7. Sequelize: How to use Sequelize (NPM package) for Database operation?
+8. Sequelize: List some the methods in Sequelize?
+9. Express.js: How to use custom module in Express.js?
 
 HTML
 ----
