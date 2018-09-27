@@ -272,20 +272,112 @@ React.js
 
   Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as `<form>`, `<div>` etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
 
-11. How can we pass the props to a component in react?
-12. What is Pure functions/components in react?
-13. What are the life cycle methods in react?
-14. For calling API's, which life cycle method of React.js should we use and why?
-15. What is JSX in react?
-16. What is stateful and stateless component in react?
-17. What do you mean by `React.Component` and `8eact.PureComponent` syntax in react and when are they used?
-18. What is the purpose of `super()` method in react?
-19. Whether `this.setState()` in react is an asynchronous call or synchronous call?
-20. Explain Context API in react?
-21. What is Refs in react?
-22. MVC: Explain MVC pattern?
-23. Redux: What is Redux?
-24. Explain any state management architecture (Flux, Redux or MobX)?
+**11. How can we pass the props to a component in react?**
+
+  Props are shorthand for properties.they are very similar to an argument is passed to a pure javascript function. Props of the component are passed from parent component which invokes component. During a component’s life cycle props should not change consider them as immutable. In React all props can be accessible with this.props.
+
+  ```javascript
+  import React from 'react';
+  class Welcome extends React.Component {
+    render() {
+      return <h1>Hello {this.props.name}</h1>;
+    }
+  }
+  ```
+
+**12. What is Pure functions/components in react?**
+
+  Pure components are the simplest and fastest components which can be written. They can replace any component which only has a render(). These components enhance the simplicity of the code and performance of the application.
+
+  * [Stateless Component vs Pure Component](https://medium.com/groww-engineering/stateless-component-vs-pure-component-d2af88a1200b)
+
+**13. What are the life cycle methods in react?**
+
+  * [Life cycle methods - React Docs](https://reactjs.org/docs/react-component.html)
+
+  * [React.js component lifecycle methods - A deep dive](https://hackernoon.com/reactjs-component-lifecycle-methods-a-deep-dive-38275d9d13c0)
+
+  * [Understanding react component life-cycle](https://code.likeagirl.io/understanding-react-component-life-cycle-49bf4b8674de)
+
+  There are three different phases of React component’s lifecycle:
+
+  * **Initial Rendering Phase or Mounting Phase:** This is the phase when the component is about to start its life journey and make its way to the DOM.
+  * **Updating Phase:** Once the component gets added to the DOM, it can potentially update and re-render only when a prop or state change occurs. That happens only in this phase.
+  * **Unmounting Phase:** This is the final phase of a component’s life cycle in which the component is destroyed and removed from the DOM.
+
+  Some of the most important lifecycle methods are:
+
+  * **componentWillMount()** – Executed just before rendering takes place both on the client as well as server-side.
+  * **componentDidMount()** – Executed on the client side only after the first render.
+  * **componentWillReceiveProps()** – Invoked as soon as the props are received from the parent class and before another render is called.
+  * **shouldComponentUpdate()** – Returns true or false value based on certain conditions. If you want your component to update, return true else return false. By default, it returns false.
+  * **componentWillUpdate()** – Called just before rendering takes place in the DOM.
+  * **componentDidUpdate()** – Called immediately after rendering takes place.
+  * **componentWillUnmount()** – Called after the component is unmounted from the DOM. It is used to clear up the memory spaces.
+
+**14. For calling API's, which life cycle method of React.js should we use and why?**
+
+  * The API calls should be made in **componentDidMount** method always.
+  * This method is executed once in a lifecycle of a component and after the first render.
+  * After a component is mounted, this method would be invoked. This is the right place to load any data from endpoint or set up any subscription.
+  * Calling here `setState` will trigger re-render.
+
+**15. What is JSX in react?**
+
+  * JSX is an XML/HTML-like syntax used by React that extends ECMAScript so that XML/HTML-like text can co-exist with JavaScript/React code. The syntax is intended to be used by preprocessors (i.e., transpilers like Babel) to transform HTML-like text found in JavaScript files into standard JavaScript objects that a JavaScript engine will parse.
+  * Basically, by using JSX you can write concise HTML/XML-like structures (e.g., DOM like tree structures) in the same file as you write JavaScript code, then Babel will transform these expressions into actual JavaScript code. Unlike the past, instead of putting JavaScript into HTML, JSX allows us to put HTML into JavaScript.
+
+**16. What is stateful and stateless component in react?**
+
+  | Stateful Component | Stateless Component |
+  | :-------------     |:-------------       |
+  |1. Stores info about component’s state change in memory| 1. Calculates the internal state of the components|
+  |2. Have authority to change state|2. Do not have the authority to change state|
+  |3. Contains the knowledge of past, current and possible future changes in state|3. Contains no knowledge of past, current and possible future state changes|
+  |4. Stateless components notify them about the requirement of the state change, then they send down the props to them.|4. They receive the props from the Stateful components and treat them as callback functions.|
+
+  * **Stateless components** are components that don’t have any state. When something is stateless, it calculates its internal state but it never directly mutates it.
+
+**17. What do you mean by `React.Component` and `React.PureComponent` syntax in react and when are they used?**
+
+  * [When to use Component or PureComponent](https://codeburst.io/when-to-use-component-or-purecomponent-a60cfad01a81)
+
+**18. What is the purpose of `super()` method in react?**
+
+   `super()` method is used in constructor to call the parent object methods.
+
+**19. Whether `setState()` call in react is an asynchronous or synchronous?**
+
+  `setState()` call in react is asynchronous in nature because React may batch multiple `setState()` calls into a single update for performance.
+
+**20. Explain Context API in react?**
+
+  * [Context API - React Docs](https://reactjs.org/docs/context.html)
+
+**21. What are refs in React? and When to use it.**
+
+  In React `ref` is used to store the reference of element or component returned by the component `render()` configuration function.Refs should be avoided in most cases, however, they can be useful when we need DOM measurements or to add methods to the components.
+
+  Refs can be used in the following cases
+
+  * Managing focus, text selection, or media playback.
+  * Triggering imperative animations.
+  * Integrating with third-party DOM libraries.
+
+**22. MVC: Explain MVC design pattern?**
+
+  * [MVC design pattern](https://www.geeksforgeeks.org/mvc-design-pattern/)
+
+
+**23. Redux: What is Redux?**
+
+  * [Redux](https://redux.js.org)
+
+**24. Explain any state management architecture (Flux, Redux or MobX)?**
+
+  * [Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
+  * [Redux](https://redux.js.org)
+  * [MobX](https://mobx.js.org/getting-started.html)
 
 Node.js
 -------
