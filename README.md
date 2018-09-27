@@ -247,7 +247,7 @@ React.js
 
 **8. What are the advantages of React.js?**
 
-  Advantages of React Js
+  Advantages of React.js
 
   * **React.js is extremely efficient:** React.js creates its own virtual DOM where your components actually live. This approach gives you enormous flexibility and amazing gain in performance. React.js also calculates what are the changes needed to be made in DOM. This process of React.js avoids expensive DOM operations and make updates in a very client manner.
 * **It makes writing Javascript easier:** React.js uses a special syntax called JSX, which allows you to mix HTML with Javascript. The user can drop a bit of HTML in the render function without having to concatenate strings, this is another fantastic thing. React.js turns those bits of HTML into functions with a special JSXTransformer.
@@ -388,87 +388,178 @@ React.js
 Node.js
 -------
 
-1. How does the `process.nextTick()` works in Node.js?
-2. What is Event loop in Node.js?
-3. Explain any caching technologies/techniques?
-4. What is Streams in Node.js?
-5. How to handle API errors in Node.js?
-6. What is `module.export` in Node.js?
-7. Sequelize: How to use Sequelize (NPM package) for Database operation?
-8. Sequelize: List some the methods in Sequelize?
-9. Express.js: How to use custom module in Express.js?
+**1. How `process.nextTick()` works in Node.js?**
+
+  * [How process.nexttick() works in node.js](https://medium.com/@amanhimself/how-process-nexttick-works-in-node-js-cb327812e083)
+
+**2. What is Event loop in Node.js?**
+
+  * [Event Loop - Node.js Docs](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+  * [What you should know to really understand the Node.js Event Loop](https://medium.com/the-node-js-collection/what-you-should-know-to-really-understand-the-node-js-event-loop-and-its-metrics-c4907b19da4c)
+  * [Walking Inside the Node.js Event Loop](https://medium.freecodecamp.org/walking-inside-nodejs-event-loop-85caeca391a9)
+
+**3. Explain any caching technologies/techniques?**
+
+  * [Simple server side cache for Express.js with Node.js](https://medium.com/the-node-js-collection/simple-server-side-cache-for-express-js-with-node-js-45ff296ca0f0)
+  * [Caching like a boss in NodeJS](https://medium.com/@danielsternlicht/caching-like-a-boss-in-nodejs-9bccbbc71b9b)
+
+**4. What is Streams in Node.js?**
+
+  * [Node.js Streams: Everything you need to know](https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93)
+
+**5. How to handle API errors in Node.js?**
+
+  * [Error Handling in Node.js](https://www.joyent.com/node-js/production/design/errors)
+  * [Checklist: Best Practices of Node.JS Error Handling (2018)](https://goldbergyoni.com/checklist-best-practices-of-node-js-error-handling/)
+
+**6. What is `module.export` in Node.js?**
+
+  * [How to use module.exports in Node.js](https://stackabuse.com/how-to-use-module-exports-in-node-js/)
+
+**7. Sequelize: How to use Sequelize (NPM package) for Database operation?**
+
+  * [Sequelize Docs](http://docs.sequelizejs.com/)
+
+**8. Sequelize: List some the methods in Sequelize?**
+
+  * [Sequelize Methods](http://docs.sequelizejs.com/manual/tutorial/models-usage.html)
+
+**9. Express.js: How to use custom module in Express.js?**
+
+  * [Getting started with Node.js modules: require, exports, imports and beyond](https://adrianmejia.com/blog/2016/08/12/getting-started-with-node-js-modules-require-exports-imports-npm-and-beyond/)
 
 HTML
 ----
 
-1. List any 5 new HTML5 tags?
-2. List any 5 input types in HTML5?
-3. List some of the HTML5 API's?
-4. Explain GeoLocation, LocalStorage and SessionStorage HTML5 API's?
-5. Difference between localStorage and sessionStorage?
-6. What is the maximum data (size) that we can store in localStorage?
-7. Can string, number, object and array be stored in localStorage and sessionStorage?
+**1. List any 5 new HTML5 tags?**
+
+  * [HTML5 Tags](https://www.w3schools.com/Html/html5_new_elements.asp)
+
+**2. List any 5 input types in HTML5?**
+
+  * [Input types in HTML5](https://www.w3schools.com/Html/html5_new_elements.asp)
+
+**3. List some of the HTML5 API's?**
+
+  * [HTML5 API](https://robertnyman.com/html5/)
+
+**4. Explain GeoLocation, LocalStorage and SessionStorage HTML5 API's?**
+
+  * [geoLocation](https://www.w3schools.com/html/html5_geolocation.asp)
+  * [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+  * [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
+
+**5. Difference between localStorage and sessionStorage?**
+
+  **LocalStorage:**
+
+  * Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data
+  * Storage limit is the maximum amongst the three
+  
+  **SessionStorage:**
+
+  * The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
+  * Data is never transferred to the server.
+  * Storage limit is larger than a cookie (at least 5MB).
+  
+  **Cookie:**
+
+  * Stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side (normally from server-side).
+  * Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
+  * Size must be less than 4KB.
+  * Cookies can be made secure by setting the httpOnly flag as true for that cookie. This prevents client-side access to that cookie
+
+**6. What is the maximum data (size) that we can store in localStorage?**
+
+  * It depends on the browser, different browser has different storage limit.
+  * In Chrome and IE, We can store upto 10MB (10MB seperate for localStorage and sessionStorage).
+  * In Firefox, We can store upto 10MB (Combining both localStorage and sessionStorage).
+
+  Read More on this here
+  [Working with quota on mobile browsers](https://www.html5rocks.com/en/tutorials/offline/quota-research/)
+
+**7. Can string, number, object and array be stored in localStorage and sessionStorage?**
+
+  Yes, We can store strings, number, object and array in localStorage and sessionStorage.
 
 CSS
 ---
 
-1. What is specificity rule in CSS?
-2. List some of the CSS selector?
-3. What is flex in CSS?
-4. How can we define variables in CSS?
-5. What is the difference between `display:hidden` and `visibility:hidden` properties in CSS?
+**1. What is specificity rule in CSS?**
+
+  * [CSS Specificity Rule](https://www.w3schools.com/css/css_specificity.asp)
+
+**2. List some of the CSS selector?**
+
+  * [CSS Selectors](https://www.sitepoint.com/css-selectors/)
+  * [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
+
+**3. What is flex in CSS?**
+
+  * [CSS Flex](https://www.w3schools.com/cssref/css3_pr_flex.asp)
+  * [The Complete CSS Flex Box Tutorial](https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc)
+
+**4. How can we define variables in CSS?**
+
+  * [CSS Variables](https://www.w3schools.com/css/css3_variables.asp)
+  * [CSS Variables — No, really!](https://medium.com/dev-channel/css-variables-no-really-76f8c91bd34e)
+
+**5. What is the difference between `display:none` and `visibility:hidden` properties in CSS?**
+
+  * [Stack Overflow](https://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone)
+
 
 ### CSS Coding Questions:
 
-  1. What will be the background color of the `div`?
+  **1. What will be the background color of the `div`?**
 
-      ```html
-      <div id="myDiv" class="myClass">TEXT</div>
-      ```
-      ```css
-      #myDiv {
-        background-color: red;
-      }
+  ```html
+  <div id="myDiv" class="myClass">TEXT</div>
+  ```
+  ```css
+  #myDiv {
+    background-color: red;
+  }
 
-      .myClass {
-        background-color: green;
-      }
-      ```
+  .myClass {
+    background-color: green;
+  }
+  ```
 
-  2. Write CSS to change the font color of 3rd, 7th and 8th `li` element to `red`.
+  **2. Write CSS to change the font color of 3rd, 7th and 8th `li` element to `red`.**
 
-      ```html
-      <ul>
-        <li>TEXT1</li>
-        <li>TEXT2</li>
-        <li>TEXT3</li>
-        <li>TEXT4</li>
-        <li>TEXT5</li>
-        <li>TEXT6</li>
-        <li>TEXT7</li>
-        <li>TEXT8</li>
-        <li>TEXT9</li>
-        <li>TEXT10</li>
-      </ul>
-      ```
-      ```css
-      li:nth-child(3) {
-        color: red;
-      }
+  ```html
+  <ul>
+    <li>TEXT1</li>
+    <li>TEXT2</li>
+    <li>TEXT3</li>
+    <li>TEXT4</li>
+    <li>TEXT5</li>
+    <li>TEXT6</li>
+    <li>TEXT7</li>
+    <li>TEXT8</li>
+    <li>TEXT9</li>
+    <li>TEXT10</li>
+  </ul>
+  ```
+  ```css
+  li:nth-child(3) {
+    color: red;
+  }
 
-      li:nth-child(7) {
-        color: red;
-      }
+  li:nth-child(7) {
+    color: red;
+  }
 
-      li:nth-child(8) {
-        color: red;
-      }
-      ```
+  li:nth-child(8) {
+    color: red;
+  }
+  ```
   
-  3. Write CSS to change the background color of alternative rows of the table to grey.
+  **3. Write CSS to change the background color of alternative rows of the table to grey.**
 
-      ```css
-      table>tr:nth-child(2n) {
-        background-color: grey;
-      }
-      ```
+  ```css
+  table>tr:nth-child(2n) {
+    background-color: grey;
+  }
+  ```
