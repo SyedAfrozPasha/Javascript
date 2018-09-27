@@ -13,174 +13,174 @@ Table of Contents
 Javascript
 ----------
 
-1. What are the different ways of creating an object in javascript?
+**1. What are the different ways of creating an object in javascript?**
 
-    * [Ways of creating objects in javascript](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions#question-28-what-are-the-ways-of-creating-objects-in-javascript-)
+  * [Ways of creating objects in javascript](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions#question-28-what-are-the-ways-of-creating-objects-in-javascript-)
 
-2. What is Namespaces in javascript?
+**2. What is Namespaces in javascript?**
 
-    * [JavaScript Namespace](https://www.codeproject.com/Articles/829254/JavaScript-Namespace)
+  * [JavaScript Namespace](https://www.codeproject.com/Articles/829254/JavaScript-Namespace)
 
-3. What is Prototypes in javascript?
+**3. What is Prototypes in javascript?**
 
-    * [Prototype in javascript](http://www.tutorialsteacher.com/javascript/prototype-in-javascript)
-    * [Javascript Prototype in plain detailed language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
-    * [Understanding prototypes in javascript](https://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/)
+  * [Prototype in javascript](http://www.tutorialsteacher.com/javascript/prototype-in-javascript)
+  * [Javascript Prototype in plain detailed language](http://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/)
+  * [Understanding prototypes in javascript](https://yehudakatz.com/2011/08/12/understanding-prototypes-in-javascript/)
 
-4. Explain `bind`, `call` and `apply` in javascript?
+**4. Explain `bind`, `call` and `apply` in javascript?**
 
-    * [bind - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
-    * [call - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
-    * [apply - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
-    * [How to call, apply and bind in javascript](https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
+  * [bind - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+  * [call - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+  * [apply - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+  * [How to call, apply and bind in javascript](https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
 
-5. What is Event Bubbling and Event Capturing in javascript?
+**5. What is Event Bubbling and Event Capturing in javascript?**
 
-    * [Event bubbling and Event capturing in javascript](https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e)
-    * [Event bubbling and capturing](https://javascript.info/bubbling-and-capturing)
+  * [Event bubbling and Event capturing in javascript](https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e)
+  * [Event bubbling and capturing](https://javascript.info/bubbling-and-capturing)
 
-6. What is Closure in javascript?
+**6. What is Closure in javascript?**
 
-    * [Closure in Javascript](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions#question-4-what-is-closure-in-javascript-can-you-provide-an-example)
-    * [Master the javascript interview - What is a closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
-    * [Closure in detail](https://javascript.info/closure)
+  * [Closure in Javascript](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions#question-4-what-is-closure-in-javascript-can-you-provide-an-example)
+  * [Master the javascript interview - What is a closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
+  * [Closure in detail](https://javascript.info/closure)
 
-7. What is `splice` and `slice` in javascript?
+**7. What is `splice` and `slice` in javascript?**
 
-    * [splice - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
-    * [slice - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+  * [splice - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+  * [slice - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
-8. What is `map`, `filter` and `reduce` in javascript?
+**8. What is `map`, `filter` and `reduce` in javascript?**
 
-    * [Functional javascript - map, filter and reduce](https://wsvincent.com/functional-javascript-map-filter-reduce/)
-    * [Javascript functional programming - map, filter and reduce](https://medium.com/jsguru/javascript-functional-programming-map-filter-and-reduce-846ff9ba492d)
-    * [reduce in javascript](https://medium.freecodecamp.org/reduce-f47a7da511a9)
+  * [Functional javascript - map, filter and reduce](https://wsvincent.com/functional-javascript-map-filter-reduce/)
+  * [Javascript functional programming - map, filter and reduce](https://medium.com/jsguru/javascript-functional-programming-map-filter-and-reduce-846ff9ba492d)
+  * [reduce in javascript](https://medium.freecodecamp.org/reduce-f47a7da511a9)
 
-9. Difference between the `setInterval` and `setTimeout` in javascript?
+**9. Difference between the `setInterval` and `setTimeout` in javascript?**
 
-    * [setTimeout and setInterval in javascript](https://javascript.info/settimeout-setinterval)
+  * [setTimeout and setInterval in javascript](https://javascript.info/settimeout-setinterval)
 
-10. What is callback hell in javascript and How can it be avoided?
+**10. What is callback hell in javascript and How can it be avoided?**
 
-    * [Callback hell and How to avoid it](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8?_sm_pdc=1&_sm_rid=K7jkMHt785MkPtS0sWHK4b96njnDs4MHnH9DD0N)
+  * [Callback hell and How to avoid it](https://blog.hellojs.org/asynchronous-javascript-from-callback-hell-to-async-and-await-9b9ceb63c8e8?_sm_pdc=1&_sm_rid=K7jkMHt785MkPtS0sWHK4b96njnDs4MHnH9DD0N)
 
-11. What is the `typeof` string, object and array in javascript?
+**11. What is the `typeof` string, object and array in javascript?**
 
-    ```javascript
-    // String
-    let name = 'John';
-    typeof name; // "string"
+  ```javascript
+  // String
+  let name = 'John';
+  typeof name; // "string"
 
-    // Object
-    let myObj = { name: 'Jane' };
-    typeof myObj; // "object"
+  // Object
+  let myObj = { name: 'Jane' };
+  typeof myObj; // "object"
 
-    // Array
-    let myArr = [1, 2, 3];
-    typeof myArr; // "object"
-    ```
+  // Array
+  let myArr = [1, 2, 3];
+  typeof myArr; // "object"
+  ```
 
-12. AJAX: What is AJAX?
+**12. AJAX: What is AJAX?**
 
-      * [AJAX - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
+  * [AJAX - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
 
-13. jQuery: List the different types of jQuery selectors?
+**13. jQuery: List the different types of jQuery selectors?**
 
-      * [jQuery Selectors - W3School](https://www.w3schools.com/jquery/jquery_ref_selectors.asp)
-      * [Selectors - jQuery Docs](https://api.jquery.com/category/selectors/)
+  * [jQuery Selectors - W3School](https://www.w3schools.com/jquery/jquery_ref_selectors.asp)
+  * [Selectors - jQuery Docs](https://api.jquery.com/category/selectors/)
 
 ### Javascript Coding Questions:
 
-1. Assume two variables `a` and `b` having an object with the different `firstName` values. Add another property to both the object `lastName` with the value of `Doe` in a single line of code.
+**1. Assume two variables `a` and `b` having an object with the different `firstName` values. Add another property to both the object `lastName` with the value of `Doe` in a single line of code.**
   
-    ```javascript
+  ```javascript
 
-    var a = { firstName: 'John' };
-    var b = { firstName: 'Jane' };
+  var a = { firstName: 'John' };
+  var b = { firstName: 'Jane' };
 
-    // Solution
-    a['lastName'] = b['lastName'] = 'Doe';
+  // Solution
+  a['lastName'] = b['lastName'] = 'Doe';
 
-    ```
+  ```
 
-2. What would be the output of following code?
+**2. What would be the output of following code?**
 
-    ```javascript
+  ```javascript
 
-    console.log(10 + true); // 11
-    console.log(-'24' + 10); // -14
-    console.log('34' + 14); // 3414
+  console.log(10 + true); // 11
+  console.log(-'24' + 10); // -14
+  console.log('34' + 14); // 3414
 
-    ```
+  ```
 
-3. What would be the output of following code?
+**3. What would be the output of following code?**
 
-    ```javascript
+  ```javascript
 
-    var a = 'Hello';
-    var b = new String('Hello');
+  var a = 'Hello';
+  var b = new String('Hello');
 
-    console.log(a == b); // true
-    console.log(a === b); // false
+  console.log(a == b); // true
+  console.log(a === b); // false
 
-    ```
+  ```
 
-4. Write a program to find whether the given string in a palindrome or not (with and without built-in javascript string methods).
+**4. Write a program to find whether the given string in a palindrome or not (with and without built-in javascript string methods).**
 
-    ```javascript
+  ```javascript
 
-    // With built-in string methods
-    function isPalindrome(str) {
-      // remove special characters, spaces and make lowercase
-      let removeChar = str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+  // With built-in string methods
+  function isPalindrome(str) {
+    // remove special characters, spaces and make lowercase
+    let removeChar = str.replace(/[^A-Z0-9]/ig, "").toLowerCase();
 
-      // reverse removeChar for comparison
-      let checkPalindrome = removeChar.split('').reverse().join('');
+    // reverse removeChar for comparison
+    let checkPalindrome = removeChar.split('').reverse().join('');
 
-      // Check to see if str is a Palindrome
-      return (removeChar === checkPalindrome);
+    // Check to see if str is a Palindrome
+    return (removeChar === checkPalindrome);
+  }
+
+  // Without build-in string methods
+  function isPalindrome(str) {
+    const len = Math.floor(str.length / 2);
+    for (let i = 0; i < len; i++) {
+      if (str[i] !== str[str.length - i - 1]) return false;
     }
+    return true;
+  }
 
-    // Without build-in string methods
-    function isPalindrome(str) {
-      const len = Math.floor(str.length / 2);
-      for (let i = 0; i < len; i++) {
-        if (str[i] !== str[str.length - i - 1]) return false;
-      }
-      return true;
+  ```
+
+**5. Write a program to find factorial of a given number (also handle 0!).**
+
+  ```javascript
+
+  function findFactorial(num) {
+    if (num < 0) {
+      return -1;
+    } else if (num === 0) {
+      return 1;
+    } else {
+      return (num * findFactorial(num - 1));
     }
+  }
 
-    ```
+  ```
 
-5. Write a program to find factorial of a given number (also handle 0!).
+**6. Find a maximum number present in a given array using `Math.max()` built-in method in both ES5 and ES6.**
 
-    ```javascript
+  ```javascript
 
-    function findFactorial(num) {
-      if (num < 0) {
-        return -1;
-      } else if (num === 0) {
-        return 1;
-      } else {
-        return (num * findFactorial(num - 1));
-      }
-    }
+  var arr = [3, 4, 1, 5, 7, 6, 2];
 
-    ```
+  // ES5
+  Math.max.apply(null, arr);
 
-6. Find a maximum number present in a given array using `Math.max()` built-in method in both ES5 and ES6.
+  // ES6
+  Math.max(...arr);
 
-    ```javascript
-
-    var arr = [3, 4, 1, 5, 7, 6, 2];
-
-    // ES5
-    Math.max.apply(null, arr);
-
-    // ES6
-    Math.max(...arr);
-
-    ```
+  ```
 
 React.js
 --------
