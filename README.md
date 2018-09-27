@@ -10,7 +10,6 @@ Table of Contents
 * [HTML](https://github.com/SyedAfrozPasha/Javascript/tree/interview#html)
 * [CSS](https://github.com/SyedAfrozPasha/Javascript/tree/interview#css)
 
-___
 Javascript
 ----------
 
@@ -182,8 +181,6 @@ Javascript
   Math.max(...arr);
 
   ```
-
-___
 
 React.js
 --------
@@ -388,7 +385,6 @@ React.js
   * [Redux](https://redux.js.org)
   * [MobX](https://mobx.js.org/getting-started.html)
 
-___
 Node.js
 -------
 
@@ -432,7 +428,6 @@ Node.js
 
   * [Getting started with Node.js modules: require, exports, imports and beyond](https://adrianmejia.com/blog/2016/08/12/getting-started-with-node-js-modules-require-exports-imports-npm-and-beyond/)
 
-___
 HTML
 ----
 
@@ -487,7 +482,6 @@ HTML
 
   Yes, We can store strings, number, object and array in localStorage and sessionStorage.
 
-___
 CSS
 ---
 
