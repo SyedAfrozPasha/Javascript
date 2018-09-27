@@ -209,6 +209,12 @@ React.js
   * [Comparison between React and Angular](https://www.c-sharpcorner.com/article/comparison-between-react-and-angular/)
   * [Angular VS React VS Vue](https://medium.com/unicorn-supplies/angular-vs-react-vs-vue-a-2017-comparison-c5c52d620176)
 
+  * **Angular Js** – developed by Google, angular is a typescript based JavaScript application framework. It is also known as Super-heroic JavaScript MVW Framework. It was developed with the motive to encounter the challenges of creating single page applications. There are several versions of angular such as Angular 2+, Angular 2 or ng2. Angular is the rewritten, mostly incompatible successor to AngularJS which means AngularJS is the oldest framework.
+
+  * **React**– React was developed by Facebook in March 2013. It is a JavaScript library that is used for building user interfaces. React creates large web applications and also provides speed, scalability, and simplicity.
+
+  * **Vue Js**- Launched in February 2014, Vue is the most famous and rapidly growing framework in JS field. Vue is an intuitive, fast and composable MVVM for building interactive interfaces. It is extremely adaptable and several JavaScript libraries make use of this. Vue is also a web application framework that helps in making advanced single page applications.
+
 **4. What is the main advantage of using React.js when compared to the other JS frameworks such as Angular or Vue.js? or Why React.js is better than Angular or Vue.js?**
 
   Major features of React are listed below:
@@ -270,7 +276,7 @@ React.js
 
 **10. What is the purpose of `render()` method in react?**
 
-  Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as `<form>`, `<div>` etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
+  `render()` method is used to update the UI. For this, you have to create a new element and send it to `ReactDOM.render()`. React elements are immutable and once you create an element, you cannot change its attributes. Thus, elements are like a single frame and it depicts the UI at some point. `ReactDOM.render()` controls the content of the container node you pass and if there is any DOM element already present in it then it would be replaced when first called.
 
 **11. How can we pass the props to a component in react?**
 
