@@ -187,7 +187,8 @@ React.js
 
 **1. What is React.js?**
 
-  * React is a front-end JavaScript library developed by Facebook in 2011.
+  * React js is javascript based UI Library developed at Facebook, to create an interactive, stateful & reusable UI components. 
+  * Its developed by Facebook in 2011.
   * It follows the component based approach which helps in building reusable UI components.
   * It is used for developing complex and interactive web and mobile UI.
 
@@ -238,9 +239,39 @@ React.js
   * [HOC in depth](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
   * [Understanding HOC](https://medium.freecodecamp.org/understanding-higher-order-components-6ce359d761b)
 
-8. What are the advantages of React.js?
-9. How do you create/define a component in react?
-10. What is the purpose of `render()` method in react?
+**8. What are the advantages of React.js?**
+
+  Advantages of React Js
+
+  * **React.js is extremely efficient:** React.js creates its own virtual DOM where your components actually live. This approach gives you enormous flexibility and amazing gain in performance. React.js also calculates what are the changes needed to be made in DOM. This process of React.js avoids expensive DOM operations and make updates in a very client manner.
+* **It makes writing Javascript easier:** React.js uses a special syntax called JSX, which allows you to mix HTML with Javascript. The user can drop a bit of HTML in the render function without having to concatenate strings, this is another fantastic thing. React.js turns those bits of HTML into functions with a special JSXTransformer.
+* **It gives you out-of-the-box developer tools:** When you start your journey with React.js, do not forget to install official React.js chrome extension. It makes debugging your application much easier. After you install the extension, you will have a direct look into the virtual DOM as if you were browsing a regular DOM tree in the elements panel. Isn’t it pretty amazing!
+* **It’s awesome for SEO:** One of the biggest problems with other Javascript frameworks is that they do not search engine friendly. Though there have been some improvements in this area, search engines generally have trouble reading Javascript heavy applications. React.js stands out from the crowd because you can run React.js on the server, and the virtual DOM will be rendered to the browser as a regular web page.
+* **UI Test Cases:** It is extremely easy to write UI test cases because the virtual DOM system implemented entirely in JS.
+
+**9. How do you create/define a component in react?**
+
+  React Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+  Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+  ```javascript
+  class Welcome extends React.Component {
+    render() {
+      return <h1>Hello, {this.props.name} </h1>;
+    }
+  }
+
+  const element = <Welcome name="John" />;
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+  ```
+
+**10. What is the purpose of `render()` method in react?**
+
+  Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as `<form>`, `<div>` etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
+
 11. How can we pass the props to a component in react?
 12. What is Pure functions/components in react?
 13. What are the life cycle methods in react?
