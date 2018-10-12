@@ -89,6 +89,7 @@ Javascript
   * [jQuery Selectors - W3School](https://www.w3schools.com/jquery/jquery_ref_selectors.asp)
   * [Selectors - jQuery Docs](https://api.jquery.com/category/selectors/)
 
+
 ### Javascript Coding Questions:
 
 **1. Assume two variables `a` and `b` having an object with the different `firstName` values. Add another property to both the object `lastName` with the value of `Doe` in a single line of code.**
@@ -427,6 +428,11 @@ Node.js
 **9. Express.js: How to use custom module in Express.js?**
 
   * [Getting started with Node.js modules: require, exports, imports and beyond](https://adrianmejia.com/blog/2016/08/12/getting-started-with-node-js-modules-require-exports-imports-npm-and-beyond/)
+
+**10. Whats the difference between Asynchronous programming & Parallel programming?**
+
+  * [Asynchronous programming & Parallel programming](https://social.msdn.microsoft.com/Forums/en-US/47e48131-5abe-45aa-a64f-e96cb8ccb868/asynchronous-programming-amp-parallel-programming?forum=async)
+  * [Asynchronous and Parallel Programming](https://www.c-sharpcorner.com/UploadFile/bc1c71/asynchronous-and-parallel-programming/)
 
 HTML
 ----
