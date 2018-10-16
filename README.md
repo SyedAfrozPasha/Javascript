@@ -34,7 +34,7 @@ Javascript
   * [apply - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
   * [How to call, apply and bind in javascript](https://www.codementor.io/niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
 
-**5. What is Event Bubbling and Event Capturing in javascript?**
+**5. What is Event Bubbling and Event Capturing in javascript and How to prevent it?**
 
   * [Event bubbling and Event capturing in javascript](https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e)
   * [Event bubbling and capturing](https://javascript.info/bubbling-and-capturing)
@@ -180,6 +180,87 @@ Javascript
 
   // ES6
   Math.max(...arr);
+
+  ```
+
+**7. Display an alert saying 'Before' before the page is loaded and another alert saying 'After' after the page has loaded using JavaScript.**
+
+  ```html
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+      <script>
+        // when page is loading
+        if (document.readyState === 'loading'){
+          alert('Before');
+        }
+
+        // when page has loaded
+        window.onload = function() {
+          alert('After');
+        }
+
+      </script>
+    </head>
+    <body>
+      <h1>Hello</h1>
+    </body>
+  </html>
+
+  ```
+
+**8. Write a program to sort numeric values in an array using javascript build-in method `sort`.**
+
+  ```javascript
+
+  let numArray = [23, 1, 45, 9];
+
+  // The default sort order is according to string Unicode code points.
+  numArray.sort(); // output: [1, 23, 45, 9]
+
+  // To sort numerically just add a new method which handles numeric sorts
+  // For ascending sort
+  numArray.sort((a, b) => a - b); // output: [1, 9, 23, 45]
+
+  // For descending sort
+  numArray.sort((a, b) => b - a); // output: [45, 23, 9, 1]
+
+  ```
+
+**9. Assume there are 5 methods which gets the different data. How to call all the 5 methods simultaneously using JavaScript.**
+
+  ```javascript
+  // Using Promise
+
+  let p1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 1000, 'one');
+  });
+
+  let p2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 2000, 'two');
+  });
+
+  let p3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 3000, 'three');
+  });
+
+  let p4 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 4000, 'four');
+  });
+
+  let p5 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 5000, 'five');
+  });
+
+
+  Promise.all([p1, p2, p3, p4, p5]).then(values => {
+    console.log(values);
+  }).catch(reason => {
+    console.log(reason)
+  });
 
   ```
 
@@ -371,16 +452,20 @@ React.js
   * Triggering imperative animations.
   * Integrating with third-party DOM libraries.
 
-**22. MVC: Explain MVC design pattern?**
+**22. What is Controlled and Uncontrolled Components in react.**
+
+  * [Controlled and Uncontrolled Input Values in React](https://medium.com/@peter.yun.kim/controlled-and-uncontrolled-input-values-in-react-907119cc98d4)
+  * [ReactJS: Controlled vs Uncontrolled components](https://ingenuity.ph/blog/reactjs-controlled-vs-uncontrolled-components/)
+
+**23. MVC: Explain MVC design pattern?**
 
   * [MVC design pattern](https://www.geeksforgeeks.org/mvc-design-pattern/)
 
-
-**23. Redux: What is Redux?**
+**24. Redux: What is Redux?**
 
   * [Redux](https://redux.js.org)
 
-**24. Explain any state management architecture (Flux, Redux or MobX)?**
+**25. Explain any state management architecture (Flux, Redux or MobX)?**
 
   * [Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
   * [Redux](https://redux.js.org)
@@ -514,6 +599,14 @@ CSS
 
   * [Stack Overflow](https://stackoverflow.com/questions/133051/what-is-the-difference-between-visibilityhidden-and-displaynone)
 
+**6. How to make a HTML page responsive without using media query or any CSS libraries?**
+
+  * [Responsive CSS Patterns without Media Queries](https://www.sitepoint.com/responsive-css-patterns-without-media-queries/)
+  * [How do I create responsive website without media queries and bootstrap?](https://www.quora.com/How-do-I-create-responsive-website-without-media-queries-and-bootstrap)
+
+**7. List the different types of positions in CSS?**
+
+  * [CSS position Property](https://www.w3schools.com/cssref/pr_class_position.asp)
 
 ### CSS Coding Questions:
 
