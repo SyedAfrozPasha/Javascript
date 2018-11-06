@@ -39,11 +39,13 @@ Javascript
   * [Event bubbling and Event capturing in javascript](https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e)
   * [Event bubbling and capturing](https://javascript.info/bubbling-and-capturing)
 
-**6. What is Closure in javascript?**
+**6. What is Closure in javascript and How it is useful?**
 
   * [Closure in Javascript](https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions#question-4-what-is-closure-in-javascript-can-you-provide-an-example)
   * [Master the javascript interview - What is a closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
   * [Closure in detail](https://javascript.info/closure)
+  * [Lets learn javascript closures](https://medium.freecodecamp.org/lets-learn-javascript-closures-66feb44f6a44)
+  * [Practical uses for closures](https://medium.com/@dis_is_patrick/practical-uses-for-closures-c65640ae7304)
 
 **7. What is `splice` and `slice` in javascript?**
 
@@ -80,14 +82,27 @@ Javascript
   typeof myArr; // "object"
   ```
 
-**12. AJAX: What is AJAX?**
+**12. What is hoisting in javascript?**
+
+  * [Hoisting in Javascript](https://codeburst.io/javascript-what-is-hoisting-dfa84512dd28)
+
+**13. List some the features of ES6**
+
+  * [ES6 features](https://webapplog.com/es6/)
+
+**14. AJAX: What is AJAX?**
 
   * [AJAX - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
 
-**13. jQuery: List the different types of jQuery selectors?**
+**15. jQuery: List the different types of jQuery selectors?**
 
   * [jQuery Selectors - W3School](https://www.w3schools.com/jquery/jquery_ref_selectors.asp)
   * [Selectors - jQuery Docs](https://api.jquery.com/category/selectors/)
+
+**16. jQuery: Explain find and filter methods in jQuery?**
+
+  * [jQuery find() method](https://www.w3schools.com/jquery/traversing_find.asp)
+  * [jQuery filter() method](https://www.w3schools.com/jquery/traversing_filter.asp)
 
 
 ### Javascript Coding Questions:
@@ -452,24 +467,69 @@ React.js
   * Triggering imperative animations.
   * Integrating with third-party DOM libraries.
 
-**22. What is Controlled and Uncontrolled Components in react.**
+**22. What is Controlled and Uncontrolled Components in react?**
 
   * [Controlled and Uncontrolled Input Values in React](https://medium.com/@peter.yun.kim/controlled-and-uncontrolled-input-values-in-react-907119cc98d4)
   * [ReactJS: Controlled vs Uncontrolled components](https://ingenuity.ph/blog/reactjs-controlled-vs-uncontrolled-components/)
 
-**23. MVC: Explain MVC design pattern?**
+**23. What is Functional and Class Components in react?**
+
+  * [Functional and Class Component](https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108)
+
+**24. How to pass data from parent to child components and vice verse in react?**
+
+  * [Passing data between React Component](https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17)
+
+**25. MVC: Explain MVC design pattern?**
 
   * [MVC design pattern](https://www.geeksforgeeks.org/mvc-design-pattern/)
 
-**24. Redux: What is Redux?**
+**26. Redux: What is Redux?**
 
   * [Redux](https://redux.js.org)
 
-**25. Explain any state management architecture (Flux, Redux or MobX)?**
+**27. Explain any state management architecture (Flux, Redux or MobX)?**
 
   * [Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
   * [Redux](https://redux.js.org)
   * [MobX](https://mobx.js.org/getting-started.html)
+
+### React.js Coding Questions:
+
+**1. What will be the output of `console.log(this.state.data)` in the following code?**
+
+  ```javascript
+
+  class App extends React.Component {
+
+    constructor() {
+      super();
+
+      this.state = {
+        data: 10
+      }
+    }
+
+    componentDidMount() {
+      this.setState({
+        data: 20
+      })
+      console.log(this.state.data); // What's the output here
+    }
+
+    render() {
+      const { data } = this.state;
+      return (
+        <div className="App">
+          <h1>Number is {data}</h1>
+        </div>
+      );
+    }
+  }
+
+  ```
+
+  _Solution:_ As the `this.setState` is an asynchronous call. So the output at this stage will be `10` (i.e. Previous state value).
 
 Node.js
 -------
@@ -608,6 +668,57 @@ CSS
 
   * [CSS position Property](https://www.w3schools.com/cssref/pr_class_position.asp)
 
+**8. In how many ways can a CSS be integrated as a web page and which type of CSS integration/styling method is preferred?**
+
+  CSS can be integrated in three ways:
+
+  **Inline**: term is used when the CSS code have attribute of HTML elements.
+
+  ```html
+  <p style="color:skyblue;"> hello world!</p>
+  ```
+
+  **External**: separate CSS file is created in the workspace and later linking them in every web page that is created. This is the preferred method to style an application.
+
+  ```html
+  <head>
+
+    <link rel="text/css" href="your_CSS_file_location"/>
+
+  </head>
+  ```
+
+  **Internal**: the head element of the web page has internal CSS implemented in it.
+
+  ```html
+  <head>
+    <style>
+
+      p {
+        color:lime;
+        background-color:black;
+      }
+
+    </style>
+  </head>
+  ```
+
+  * [CSS Styles](https://www.w3schools.com/css/css_howto.asp)
+
+**9. Based on the specificity rule, In what order will the styles types are applied to a HTML?**
+
+  Based on the specificity rule, Style types are applied in this order:
+
+  1. Inline style
+  2. Internal style
+  3. External style
+
+  * [CSS Styles](https://www.w3schools.com/css/css_howto.asp)
+
+**10. What is grid/grid layout in CSS?**
+
+  * [CSS Grid](https://www.w3schools.com/css/css_grid.asp)
+
 ### CSS Coding Questions:
 
   **1. What will be the background color of the `div`?**
@@ -662,3 +773,46 @@ CSS
     background-color: grey;
   }
   ```
+
+  **4. What will be the position of second `div` when the position relative or absolute is applied to it.**
+
+  ```html
+  <div class="myDiv myClass1"></div>
+  <div class="myDiv myClass2"></div>
+  <div class="myDiv myClass3"></div>
+  <div class="myDiv myClass4"></div>
+  ```
+
+  ```css
+  .myDiv {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: inline-block;
+  }
+
+  .myClass1 {
+    background-color: red;
+  }
+
+  .myClass2 {
+    top: 20px;
+    left: 20px;
+    position: relative; /* or absolute */
+    background-color: green;
+  }
+
+  .myClass3 {
+    background-color: yellow;
+  }
+
+  .myClass4 {
+    background-color: blue;
+  }
+  ```
+
+  _Solution:_
+
+  * [For Position relative](https://codepen.io/SyedAfrozPasha/pen/EdJNyz)
+
+  * [For Position absolute](https://codepen.io/SyedAfrozPasha/pen/bmJBMM) 
