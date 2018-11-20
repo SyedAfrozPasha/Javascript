@@ -90,16 +90,30 @@ Javascript
 
   * [ES6 features](https://webapplog.com/es6/)
 
-**14. AJAX: What is AJAX?**
+**14. What's the difference between `var`, `let` and `const` in javascript?**
+
+  * `var` declarations are globally scoped or function scoped while `let` and `const` are block scoped.
+
+  * `var` variables can be updated and re-declared within its scope; `let` variables can be updated but not re-declared; `const` variables can neither be updated nor re-declared.
+
+  * They are all hoisted to the top of their scope but while `var` variables are initialized with undefined, `let` and `const` variables are not initialized.
+
+  * While `var` and `let` can be declared without being initialized, `const` must be initialized during declaration.
+
+**15. List some the uses of spread operator.**
+
+  * [6 Great Uses of the Spread Operator](https://davidwalsh.name/spread-operator)
+
+**16. AJAX: What is AJAX?**
 
   * [AJAX - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
 
-**15. jQuery: List the different types of jQuery selectors?**
+**17. jQuery: List the different types of jQuery selectors?**
 
   * [jQuery Selectors - W3School](https://www.w3schools.com/jquery/jquery_ref_selectors.asp)
   * [Selectors - jQuery Docs](https://api.jquery.com/category/selectors/)
 
-**16. jQuery: Explain find and filter methods in jQuery?**
+**18. jQuery: Explain find and filter methods in jQuery?**
 
   * [jQuery find() method](https://www.w3schools.com/jquery/traversing_find.asp)
   * [jQuery filter() method](https://www.w3schools.com/jquery/traversing_filter.asp)
