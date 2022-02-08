@@ -2,7 +2,7 @@
 
 ## Big O Notation
 
-- Big O notation is used to measure how the run time or space requirements for your program grow as input size grows.
+- Big O notation is used to measure how the **run time** or **space** requirements for your program grow as **input size** grows.
 
 - Big O Notation can give us a high level understanding of the time or space complexity of an algorithm.
 
@@ -12,7 +12,7 @@
 
 ### Time Complexity - General Explanation
 
-- In time complexity, we analyze the runtime of an algorithm/program as the size of the inputs increases.
+- In time complexity, we analyze the **runtime** of an algorithm/program as the size of the inputs increases.
 
 - Let us consider a function with input `n` -> `f(n)`
 
@@ -105,7 +105,7 @@
 
 ### Space Complexity - General Explanation
 
-- In space complexity, we analyze how much additional memory do we need to allocate in order to run the code in our algorithm.
+- In space complexity, we analyze how much additional **memory** do we need to allocate in order to run the code in our algorithm.
 
 - For space complexity, we only care about the auxiliary space complexity. Auxiliary space complexity refer to the space required by the algorithm, not including space taken up by the inputs.
 
